@@ -31,17 +31,17 @@ export const PAGES: {
 
   {
     logo: "/icons/calender__sidebar.svg",
-    link: "/planner",
+    link: "",
     content: "Plans",
   },
   {
     logo: "/icons/whistle.svg",
-    link: "/challenge",
+    link: "",
     content: "Challenges",
   },
   { logo: "/icons/books.svg", link: "/wiki", content: "Wiki" },
-  { logo: "/icons/book_light.svg", link: "/blog", content: "Blogs" },
-  { logo: "/icons/store.svg", link: "/", content: "Shop" },
+  { logo: "/icons/book_light.svg", link: "", content: "Blogs" },
+  { logo: "/icons/store.svg", link: "", content: "Shop" },
 ];
 
 export default function SidebarComponent(props) {
@@ -50,13 +50,15 @@ export default function SidebarComponent(props) {
   const dispatch = useAppDispatch();
 
   const handleClick = (link: string, menuName: sidebarActiveMenuNameType) => {
-    if (menuName === "Home") {
-      dispatch(setCollectionDetailsId(""));
-      dispatch(setOpenCollectionsTary(false));
-      dispatch(setShowAllRecipes(false));
+    if (link) {
+      if (menuName === "Home") {
+        dispatch(setCollectionDetailsId(""));
+        dispatch(setOpenCollectionsTary(false));
+        dispatch(setShowAllRecipes(false));
+      }
+      dispatch(updateSidebarActiveMenuName(menuName));
+      router?.push(link);
     }
-    dispatch(updateSidebarActiveMenuName(menuName));
-    router?.push(link);
   };
 
   return (
