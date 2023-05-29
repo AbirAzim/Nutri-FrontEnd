@@ -95,7 +95,7 @@ export default function HeaderComponent({
         <div className={styles.header__inner}>
           <Link href="/" passHref>
             <div className={styles.left + " " + styles.logo}>
-              {logo && <h1>NutriPal</h1>}
+              {logo && <h1></h1>}
             </div>
           </Link>
           <div className={styles.center}>
