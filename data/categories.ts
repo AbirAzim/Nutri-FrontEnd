@@ -1,0 +1,15 @@
+export const categories = [
+  { label: "All", value: "All" },
+  { label: "Leafy", value: "Leafy" },
+  { label: "Berry", value: "Berry" },
+  { label: "Herbal", value: "Herbal" },
+  { label: "Fruity", value: "Fruity" },
+  { label: "Balancer", value: "Balancer" },
+  { label: "Fatty", value: "Fatty" },
+  { label: "Seasoning", value: "Seasoning" },
+  { label: "Flavor", value: "Flavor" },
+  { label: "Rooty", value: "Rooty" },
+  { label: "Flowering", value: "Flowering" },
+  { label: "Liquid", value: "Liquid" },
+  { label: "Tube-Squash", value: "Tube-Squash" },
+];

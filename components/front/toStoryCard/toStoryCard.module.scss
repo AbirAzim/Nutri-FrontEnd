@@ -1,0 +1,87 @@
+@mixin responsive($min_width, $max_width) {
+    @media only screen and (min-width: $min_width) and (max-width: $max_width) {
+        @content;
+    }
+}
+
+.mainDiv {
+    min-height: 350px;
+    background-image: url(/images/story-bg.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 60px;
+    max-width: 100vw;
+
+    @include responsive(0px, 1080px) {
+        padding: 10px;
+    }
+
+    .content {
+        display: block;
+        width: 66%;
+        margin: auto 0px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+
+        @include responsive(0px, 1080px) {
+            margin: 50px 0px;
+        }
+
+        h2 {
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            line-height: 1.2;
+            width: 100%;
+            max-width: 420px;
+            margin-bottom: 12px;
+
+            @include responsive(0px, 1080px) {
+                font-size: 22px;
+                margin-top: 10px;
+            }
+        }
+
+        p {
+            font-size: 15px;
+            letter-spacing: 0.8;
+            line-height: 1.8;
+            max-width: 520px;
+        }
+
+
+
+        li {
+            margin-top: auto;
+            list-style-type: none;
+            color: #fe5d1f;
+            font-size: 22px;
+            cursor: pointer;
+
+            @include responsive(0px, 1080px) {
+                font-size: 18px;
+                margin-left: 5px;
+            }
+        }
+
+        span {
+            position: relative;
+            width: 10px;
+            height: 10px;
+            margin-right: 13px;
+
+            @include responsive(0px, 1080px) {
+                margin-right: 20px;
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+        }
+    }
+}

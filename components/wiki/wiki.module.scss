@@ -1,0 +1,54 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixin";
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  max-width: $_3xl;
+  padding: 0 10px;
+  margin: 20px auto;
+
+  @include media(lg) {
+    padding: 0 16px;
+  }
+}
+
+.left {
+  margin-top: 20px;
+  width: 100%;
+  display: none;
+
+  @include media(xl) {
+    display: block;
+  }
+}
+
+.center {
+  width: 100%;
+}
+
+.singleWikiItemContainer {
+  min-height: 100vh;
+  width: 100%;
+  max-width: $_3xl;
+  padding: 0 10px;
+  margin: 40px auto 20px auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 16px;
+
+  @include media(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    padding: 0 16px;
+  }
+  @include media(xl) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
+
+.stickyContainer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+}

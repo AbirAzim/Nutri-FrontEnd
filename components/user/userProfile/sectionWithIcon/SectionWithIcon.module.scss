@@ -1,0 +1,104 @@
+.sectionWithIconContainer {
+  padding: 30px 0px;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    margin-bottom: -16px;
+
+    @media screen and (max-width: 900px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.imageContainer {
+  width: 100%;
+
+  &__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    flex-wrap: wrap;
+    &__element {
+      margin: 0 auto;
+      // width: 33.33%;
+    }
+  }
+}
+
+.singleImage {
+  cursor: pointer;
+
+  .imageBox {
+    background-color: #fbfbfb !important;
+    border: 5px solid #fbfbfb;
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    margin: 50px auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+
+    img {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      @media screen and (max-width: 900px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 121px;
+      height: 121px;
+      margin: 30px auto 30px;
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    color: #c4c4c4;
+    margin: 0;
+    text-align: center;
+    min-height: 55px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+.singleImage:hover h2 {
+  color: #000;
+}
+
+.singleImage.active h2 {
+  color: #000;
+}
+
+.singleImage:hover .imageBox {
+  background-color: #fff;
+  border: 5px solid #fe5d1f;
+}
+
+.singleImage.active .imageBox {
+  background-color: #fff;
+  border: 5px solid #fe5d1f;
+}
+
+.singleImage:hover .imageBox img {
+  filter: inherit;
+  -webkit-filter: inherit;
+}
+
+.singleImage.active .imageBox img {
+  filter: inherit;
+  -webkit-filter: inherit;
+}

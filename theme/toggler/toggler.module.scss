@@ -1,0 +1,137 @@
+.toggler {
+  display: flex;
+}
+
+.toggler * {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.toggler .toggler__main {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  padding: 0 15px;
+  height: 80%;
+}
+
+/* .toggler .toggler__main:not(:last-child){
+    border-right: 3px solid #CE3108;
+} */
+/* .toggler .toggler__main:last-child{
+    border-right: none !important;
+} */
+.toggler .toggler__main:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  height: 60%;
+  width: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: #ce3108;
+}
+
+.toggler__main img {
+  filter: brightness(0) invert(1);
+  max-width: 100%;
+  width: 50px;
+}
+
+.children {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.toggler__left {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.toggler__right {
+  text-align: left;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 125px;
+}
+
+.toggler__right p:first-child {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.toggler__right p:last-child {
+  font-size: 22px;
+  margin: 0;
+  letter-spacing: 0.88px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  .toggler__right p:last-child {
+    font-size: 17px;
+  }
+
+  .toggler__right {
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  .toggler {
+    flex-wrap: wrap;
+  }
+
+  .toggler__main {
+    width: 50% !important;
+  }
+
+  .toggler .toggler__main:nth-child(even)::after {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .toggler__main {
+    width: 100% !important;
+  }
+
+  .toggler .toggler__main::after {
+    display: none;
+  }
+}
+
+.children {
+  padding: 20px 30px;
+  width: 100%;
+  height: 100% !important;
+}
+
+.active .children {
+  background-color: #fff !important;
+  width: 94%;
+  height: 100%;
+  color: #fe5d1f;
+  border-radius: 20px;
+  user-select: none;
+}
+
+.active img {
+  filter: none !important;
+}
+
+@media screen and (max-width: 630px) {
+  .toggler__main {
+    padding: 0 !important;
+  }
+
+  .active .children {
+    width: 100% !important;
+  }
+}

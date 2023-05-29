@@ -1,0 +1,97 @@
+@import "../../../styles/mixins";
+
+.plannerIcon {
+  position: relative;
+  aspect-ratio: 1;
+  width: 20px;
+}
+
+.mainContainer {
+  &__tray {
+    min-height: 400px;
+    position: relative;
+
+    &__childrenDiv {
+      padding: 6px;
+    }
+
+    &__card {
+      margin: 10px 0px;
+    }
+  }
+}
+
+.calender {
+  color: #fd5109;
+  cursor: pointer;
+
+  &__tray {
+    background-color: white;
+    min-height: 200px;
+    min-width: max-content;
+    border-radius: 5px;
+    display: flex;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+}
+
+.blendType {
+  // position: absolute;
+  // z-index: 100;
+  // max-width: 80%;
+  // height: 1rem;
+  min-width: 34rem;
+  @include respond(1740px) {
+    min-width: 31rem;
+  }
+  @include respond(1600px) {
+    min-width: 28rem;
+  }
+  @include respond(1500px) {
+    min-width: 26rem;
+  }
+  @include respond(1400px) {
+    min-width: 24rem;
+  }
+  @include respond(1320px) {
+    min-width: 22rem;
+  }
+  @include respond(1250px) {
+    min-width: 20rem;
+  }
+  @include respond(1150px) {
+    min-width: 18rem;
+  }
+
+  overflow: hidden;
+  &--show {
+    display: block !important;
+  }
+  &--hide {
+    display: none !important;
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1rem;
+  width: 100%;
+  height: 6rem;
+  position: relative;
+}
+
+.wrapper {
+  background-color: #fff;
+  padding: 1rem;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  height: 100rem;
+  overflow: auto;
+}

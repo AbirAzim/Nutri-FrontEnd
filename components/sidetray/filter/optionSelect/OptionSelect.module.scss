@@ -1,0 +1,123 @@
+@import "../../../../styles/partials/variables";
+.optionSelectContainer {
+  width: 100%;
+
+  .options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .signleItem {
+      position: relative;
+      background-color: white;
+      padding: 5px 10px;
+      border-radius: 2.5rem;
+      text-align: center;
+      display: inline-flex;
+      position: relative;
+      box-shadow: 1px 2px 4px #ececec;
+      border: 1px solid #f6f6f6;
+      justify-content: center;
+      margin-right: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      span {
+        font-size: 14px;
+      }
+      &:hover {
+        border: 1px solid #dbdbdb;
+      }
+    }
+    .selectedSecondary {
+      border-color: $secondaryColor;
+    }
+    .selectedPrimary {
+      border-color: $primaryColor;
+    }
+  }
+}
+
+.tick {
+  position: absolute;
+  right: 0px;
+  overflow: hidden;
+  top: -8px;
+}
+
+.ticked {
+  // border-radius: 50%;
+  // width: 100%;
+  //  transform: scale(0.7);
+  // aspect-ratio: 1;
+  color: #f95d2b;
+  background-color: white;
+}
+
+.optionSelectHeaderContainer {
+  width: 100%;
+  .optionSelectInput {
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 10px;
+    color: #bcbcbc;
+    line-height: 36px;
+    font-size: 12px;
+    min-height: 30px;
+    margin-bottom: 16px;
+    width: 100%;
+    outline: none;
+    &:focus {
+      border: 1px solid #7dbd3b;
+    }
+    &::placeholder {
+      color: #bcbcbc;
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0px;
+    .leftSide {
+      display: flex;
+      align-items: center;
+      .icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #112433;
+        background-color: white;
+        box-shadow: 1px 2px 4px #ececec;
+        margin-right: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #e6e6e6;
+        }
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .rightSide {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #112433;
+      background-color: white;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e6e6e6;
+      }
+    }
+  }
+}

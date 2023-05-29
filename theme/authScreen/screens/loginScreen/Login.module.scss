@@ -1,0 +1,404 @@
+@use "../../breakpoints.module.scss" as bp;
+
+.inputMainDiv {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  min-height: 95vh;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover;
+  padding: 50px 52px;
+
+  @media screen and (max-width: bp.$breakPoint10) {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    padding: 0px 22px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+    padding: 70px 33px;
+  }
+}
+
+.inputContentDiv {
+  display: block;
+  // background-color: #2a2e99;
+  height: auto;
+  max-height: fit-content;
+  width: 100%;
+
+  @media screen and (max-width: bp.$breakPoint10) {
+    min-height: 90vh;
+  }
+
+  .logo {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    position: relative;
+
+    div {
+      width: 190px;
+      height: auto;
+    }
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      display: flex;
+      width: 100%;
+      height: 100px;
+      position: relative;
+      left: 0;
+      // margin-top: 0px;
+      margin: 0px auto;
+      // height: 150px;
+      // padding: 40px;
+
+      div {
+        position: absolute;
+        left: 50% !important;
+        transform: translateX(-50%);
+        width: 190px;
+        margin-left: 100px;
+        height: 100%;
+
+        img {
+          display: inline-block;
+          height: 100%;
+          width: 190px;
+        }
+      }
+    }
+    .cross {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) scale(0.55);
+      display: block;
+      color: #cbcbcb;
+      width: fit-content;
+      height: fit-content;
+      margin: auto 15px auto auto;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+      box-sizing: border-box;
+
+      svg {
+        position: relative;
+        transform: translateY(15%);
+      }
+
+      @media screen and (max-width: bp.$breakPoint10) {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      width: 100%;
+      margin: 0px auto 30px auto;
+    }
+  }
+
+  h2 {
+    margin-top: 2px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 2px;
+    font-size: 30px;
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      margin-top: 6px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      font-size: 22px;
+      margin-top: 0px;
+    }
+  }
+
+  .quickLogin {
+    display: none;
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      display: block;
+      width: 100%;
+      margin: 22px auto;
+      font-size: 14px;
+
+      span {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  p {
+    color: #000;
+    line-height: 2;
+    letter-spacing: 0.72px;
+    font-weight: 400;
+    text-align: left;
+    background-color: transparent;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 20px 0px;
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      display: none;
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      font-size: 14px;
+      padding: 20px 0;
+    }
+  }
+
+  .forgetPassword {
+    margin-left: auto;
+    width: fit-content;
+    margin-top: 16px;
+    font-size: 18px;
+    color: #929292;
+    transition: all 0.3s ease 0s;
+
+    div {
+      display: none;
+    }
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 28px 4px 10px auto;
+      font-size: 12px;
+
+      div {
+        display: block;
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+
+        input {
+          position: absolute;
+          margin: auto;
+          height: 16px;
+          width: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        label {
+          margin-left: 24px;
+        }
+      }
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      margin: 14px 4px 0px auto;
+    }
+  }
+
+  .buttonDiv {
+    height: 60px;
+    width: 250px;
+    margin: 40px auto;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      width: 200px;
+      margin: 20px auto;
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      height: 50px;
+      width: 170px;
+      margin: 20px auto;
+    }
+  }
+
+  .lineSocialDiv {
+    display: block;
+    @media screen and (max-width: bp.$breakPoint10) {
+      display: none;
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      height: 50px;
+      width: 170px;
+      margin: 10px auto 0 auto;
+    }
+  }
+
+  .seperator {
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    border-bottom: solid 1px #e9ecef;
+    margin-bottom: 20px;
+
+    &:before {
+      content: "or";
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #8995ac;
+      font-size: 16px;
+      top: 50%;
+      background-color: #f5f5f5;
+      padding: 0px 10px;
+      font-family: "Segoe UI";
+    }
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      display: block;
+      margin: 20px auto 30px auto;
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      height: 50px;
+      width: 170px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.imgMainDiv {
+  position: relative;
+  display: block;
+  background-position-x: left;
+  background-position-y: center;
+  background-size: cover;
+  width: 50%;
+  min-height: 95vh;
+  height: auto;
+  background-color: #f5f5f5;
+
+  @media screen and (max-width: bp.$breakPoint10) {
+    width: 100%;
+    height: 100vh;
+  }
+
+  @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+    width: 50%;
+  }
+
+  .imgContentDiv {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    min-height: 100%;
+    height: 100%;
+    width: 55%;
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      width: 40%;
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      width: 80%;
+    }
+  }
+
+  .contentCard {
+    position: relative;
+    height: 235px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    h2 {
+      display: block;
+      padding: 0;
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 2;
+      color: #fff;
+      padding: 30px 0 50px 0;
+      word-wrap: break-word;
+      text-align: center;
+    }
+
+    .buttonRightDiv {
+      height: 60px;
+      width: 250px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      position: relative;
+      height: 200px;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 14px;
+        padding: 20px 4px 0px 4px;
+      }
+
+      .buttonRightDiv {
+        height: 60px;
+        width: 200px;
+        margin: 20px auto;
+      }
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      height: 200px;
+      padding-top: 30px;
+
+      h2 {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        padding: 16px 4px 16px 4px;
+      }
+
+      .buttonRightDiv {
+        height: 50px;
+        width: 170px;
+        margin: 10px auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.loggingInBtn {
+  display: flex;
+  width: 100%;
+  & > span {
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+  }
+}

@@ -1,0 +1,55 @@
+.singleIngredientContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: all 1000s linear;
+  position: relative;
+  &:hover {
+    .leftSide .dargIcon {
+      visibility: visible;
+    }
+    .rightSide .plusIcon {
+      display: block;
+    }
+    .rightSide .closeIcon {
+      display: block;
+    }
+  }
+
+  .leftSide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .dargIcon {
+      color: #c4c4c4;
+      font-size: 20px;
+      outline: none;
+      visibility: hidden;
+    }
+    .text {
+      font-size: 14px;
+      color: #ababab;
+      margin-top: -6px;
+    }
+  }
+
+  .rightSide {
+    .plusIcon {
+      color: #7cbc39;
+      font-size: 20px;
+      display: none;
+      margin-top: -6px;
+      cursor: pointer;
+    }
+
+    .closeIcon {
+      color: #c4c4c4;
+      font-size: 20px;
+      display: none;
+      margin-top: -6px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import "../../../../styles/partials/variables";
+$sharedColor: #fe5d1f;
+$iconGapBasedOnWidth: 24px;
+
+%sharedAccordianDiv__tray__elem {
+  display: flex;
+  align-items: center;
+}
+
+.centerElement {
+  // background-color: rebeccapurple;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: $primaryColor;
+
+    margin-left: calc($iconGapBasedOnWidth * 2 * -1);
+    margin-right: calc($iconGapBasedOnWidth);
+
+    aspect-ratio: 1;
+    height: 24px;
+    border-radius: 5px;
+    border: 2px $primaryColor solid;
+    cursor: pointer;
+  }
+
+  .heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .mainHeading {
+      font-size: 20px;
+      font-weight: 500;
+      width: 33.33%;
+    }
+  }
+
+  &__mainHeading {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.accordianDiv {
+  transition: all 0.3s ease-in-out !important;
+  overflow: hidden;
+  margin: 10px auto;
+
+  &__tray {
+    display: flex;
+    padding: 8px 0px;
+    font-size: 16px;
+
+    &:not(:last-child) {
+      border-bottom: 1px #ececec solid;
+    }
+
+    div {
+      width: 33.33%;
+    }
+
+    &__left {
+      @extend %sharedAccordianDiv__tray__elem;
+      justify-content: left;
+    }
+
+    &__center {
+      @extend %sharedAccordianDiv__tray__elem;
+      justify-content: center;
+    }
+    &__centerGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 10px;
+      align-items: center;
+      .leftSide {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__right {
+      @extend %sharedAccordianDiv__tray__elem;
+      justify-content: center;
+      position: relative;
+
+      span {
+        margin: 0px 10px;
+      }
+
+      &__icon {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: $primaryColor !important;
+      }
+    }
+  }
+}
+
+.errorText {
+  font-size: 14px;
+  color: $errorColor;
+}

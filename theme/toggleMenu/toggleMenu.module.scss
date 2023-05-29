@@ -1,0 +1,76 @@
+@import "../../styles/partials/variables";
+.topMenuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .topMenu {
+    width: 100%;
+    display: flex;
+    flex-flow: nowrap;
+    margin: 10px auto;
+    border: 1px solid #dfdfdf;
+    border-radius: 18px;
+    height: 37px;
+    position: relative;
+    .menu {
+      color: #929292;
+      border-radius: 18px;
+      height: 35px;
+      font-size: 14px;
+      padding: 0;
+      text-align: center;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+    .containPrimary {
+      color: #fff;
+    }
+    .containSecondary {
+      color: #fff;
+    }
+    .outlinePrimary {
+      color: $primaryColor;
+    }
+    .outlineSecondary {
+      color: $secondaryColor;
+    }
+  }
+}
+
+.userPlan {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.active {
+  height: 35px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0px;
+  border-radius: 18px;
+  transition: all 0.3s;
+}
+
+.containPrimary {
+  background-color: $primaryColor;
+}
+.containSecondary {
+  background-color: $secondaryColor;
+}
+.outlinePrimary {
+  border: 2px solid $primaryColor;
+}
+.outlineSecondary {
+  border: 2px solid $secondaryColor;
+}

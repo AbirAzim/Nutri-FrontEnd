@@ -1,0 +1,150 @@
+@import "../../../styles/partials/variables";
+
+.wikiCardContainer {
+  width: 100%;
+  height: auto;
+  background-color: $white;
+  border-radius: 10px;
+  transition: all 0.3s;
+  padding: 0 5px;
+  //border: 1.5px solid #eeeaeaa8;
+  &:hover {
+    box-shadow: 0px 2px 3px #0000001a;
+    //border-color: $white;
+  }
+  &:hover .title {
+    color: $primaryColor;
+  }
+  &:hover .imageWarper {
+    transform: scale(1.05);
+  }
+}
+
+.datacard * {
+  transition: all 0.3s;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.body {
+  background-color: $white;
+
+  .bodyMain {
+    display: flex;
+    margin: 0 10px;
+    height: 100px;
+
+    .imageWarper {
+      width: 100px;
+      flex-shrink: 0;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: all 0.3s;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .infoWarper {
+      width: auto;
+      margin-left: 10px;
+      height: 100%;
+      overflow: hidden;
+      font-size: 12px;
+      color: #c4c4c4;
+      .category {
+        width: 100px;
+        padding: 5px 10px;
+        border: 1px solid #c4c4c4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+      }
+
+      .description {
+        margin-top: 10px;
+        font-weight: 500;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .bodyFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ebebeb;
+    margin-top: 10px;
+    padding: 5px 10px;
+    .text {
+      font-size: 14px;
+      font-weight: 500;
+      span {
+        color: $primaryColor;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  .author {
+    .text {
+      font-size: 14px;
+      font-weight: 500;
+      color: #c4c4c4;
+    }
+  }
+  .iconBox {
+    display: flex;
+    align-items: center;
+    color: #c4c4c4;
+    font-size: 16px;
+
+    .icon {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .text {
+      margin-left: 3px;
+      font-size: 14px;
+    }
+
+    .commentsIconBox {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.activeIcon {
+  color: $secondaryColor;
+}
+.inActiveIcon {
+  color: #c4c4c4;
+}

@@ -1,0 +1,70 @@
+@import "../../../styles/partials/mixin";
+@import "../../../styles/partials/variables";
+
+.compareRecipeContainer {
+  margin-top: 40px;
+}
+
+.mainContentDiv {
+  max-width: $_2xl;
+  margin: 0 auto;
+  padding: 40px 16px;
+  min-height: 90vh;
+}
+
+.comparePageContainer {
+  width: 100%;
+  transition: all 0.3s linear;
+  display: flex;
+
+  justify-content: center;
+  .firstColumn {
+    width: 25%;
+  }
+  .secondColumn {
+    width: 75%;
+  }
+
+  @media (max-width: 1280px) {
+    // grid-template-columns: 33.33% 66.66%;
+    .firstColumn {
+      width: 33.33%;
+    }
+    .secondColumn {
+      width: 66.66%;
+    }
+  }
+  @media (max-width: 1024px) {
+    // grid-template-columns: 50% 50%;
+    .firstColumn {
+      width: 50%;
+    }
+    .secondColumn {
+      width: 50%;
+    }
+  }
+  @media (max-width: 768px) {
+    // grid-template-columns: 100%;
+    flex-direction: column;
+    .firstColumn {
+      width: 100%;
+    }
+    .secondColumn {
+      width: 100%;
+    }
+  }
+}
+
+.button__bar {
+  @include sliderCustomDot;
+}
+
+.button__bar :global(li.slick-active) button {
+  background-color: $primaryColor;
+}
+
+.slick-slide img {
+  border: 5px solid #fff;
+  display: block;
+  margin: auto;
+}

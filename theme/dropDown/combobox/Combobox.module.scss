@@ -1,0 +1,54 @@
+@import "../../../styles/partials/variables";
+
+.field {
+  label {
+    margin-bottom: 10px;
+    display: block;
+
+    &.required:after {
+      content: "*";
+      color: #c62727;
+      margin-left: 3px;
+    }
+  }
+  & + .field {
+    margin-top: 10px;
+  }
+}
+
+.custom-input {
+  border: 1px solid #dbdbdb;
+  // box-shadow: 1px 2px 4px #ececec;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  //height: 50px;
+  transition: 0.3s;
+  // font-family: $font;
+  outline: 0;
+  width: 100%;
+  min-width: 120px;
+  background-color: white;
+  color: $lightTextColor;
+  &::placeholder {
+    color: $lightTextColor;
+  }
+
+  &[readonly] {
+    pointer-events: none;
+    background-color: #dbdbdb;
+    border: 0;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $primaryColor;
+  }
+}
+
+select.custom-input {
+  appearance: none;
+  background: white url("/icons/select-arrow.svg") no-repeat right 10px center;
+  background-size: 12px;
+  padding-right: 25px;
+}

@@ -1,0 +1,33 @@
+$paddingValue: 5px 5px;
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__card {
+    background-color: white;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    &__toggler {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      padding: 0px 8px;
+      color: #c5c5c5;
+
+      &__left,
+      &__right {
+        transition: all 0.1s ease-in;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: $paddingValue;
+        box-sizing: content-box;
+        width: 43%;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

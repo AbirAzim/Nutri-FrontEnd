@@ -1,0 +1,25 @@
+@import "../../../../styles/partials/mixin";
+.customeArrowContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+    min-width: 90px;
+    position: relative;
+  }
+}
+
+.prev {
+  @include SliderbuttonShape;
+  margin-right: 16px;
+}
+
+.next {
+  @include SliderbuttonShape;
+}

@@ -1,0 +1,119 @@
+@import "../../../styles/variables";
+
+.insights {
+  width: 100%;
+  height: 100%;
+
+  &__body {
+    padding: 3rem 2rem;
+    background-color: white;
+    border-radius: 10px;
+    height: 100rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__summary {
+    background-color: #d5d5d561;
+    padding: 2.3rem 0 1rem;
+    border-radius: 9px;
+    margin-bottom: 3rem;
+    div {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    h4 {
+      color: #fd5109;
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+    }
+    span {
+      color: #515050;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__graph {
+    margin-bottom: 2rem;
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: #070707;
+    }
+    h5 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-top: 1rem;
+      color: $secondaryColor;
+    }
+  }
+
+  &__timeframes {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  &__legend {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-top: 6px;
+    margin-bottom: 1rem;
+    span {
+      padding: 2px 7px;
+      border-radius: 15px;
+      margin-left: 5px;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+  }
+}
+
+#insights__progress {
+  border-radius: 50px;
+  &_wrapper {
+    width: 30rem;
+    margin: auto;
+  }
+}
+
+.challenge_circle {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.challenge_circle_food_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.challenge_circle_food_color_represent {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  width: 30px;
+}
+
+.challenge_circle_food_name {
+  color: #a8a6a6;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1.1rem;
+}

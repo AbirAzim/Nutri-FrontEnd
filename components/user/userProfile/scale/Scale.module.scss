@@ -1,0 +1,24 @@
+.scaleContainer {
+  padding: 30px 0px;
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    @media screen and (max-width: 900px) {
+      font-size: 22px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #fe5d1f;
+    text-align: center;
+    letter-spacing: 0.54px;
+    font-weight: 600;
+    padding-bottom: 40px;
+  }
+  &__scale {
+    padding: 40px 0px;
+  }
+}

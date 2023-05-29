@@ -1,0 +1,143 @@
+.smallCard {
+  width: 100%;
+  // background-color: #fff;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 99;
+  padding: 20px 0px;
+  transition: all 0.3s;
+  width: 175px;
+  height: auto;
+
+  &__innerContainer {
+    width: 175px;
+    position: relative;
+  }
+
+  &__top {
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+    transition: all;
+    transition-duration: 0.3s;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    position: relative;
+    border: 1px solid #dcdbdb;
+    border-bottom: none;
+    padding: 10px;
+    img {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      overflow: hidden;
+      transition: all;
+      transition-duration: 0.3s;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+      transition: all;
+      transition-duration: 0.5s;
+    }
+  }
+
+  &__bottom {
+    border: 1px solid #dcdbdb;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: #fff;
+    box-shadow: inset 0px -1px 1px #dcdbdb69;
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+  }
+
+  &__bottom p {
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    padding: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+    color: #000;
+    align-self: center;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  &:hover .tick {
+    display: block;
+  }
+}
+
+.comparContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.compar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  background: #fafbf9db;
+  border: none;
+  width: 65%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  color: #f95d2b;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  display: none;
+}
+.disable {
+  cursor: not-allowed;
+  color: #bdbdbd;
+}
+
+.smallCard__innerContainer:hover .compar {
+  display: flex !important;
+}
+
+.drag {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transform: translateX(-100%);
+  z-index: 8;
+  color: #bdbdbd;
+  cursor: pointer;
+}
+
+.smallCard__innerContainer:hover .drag {
+  display: block;
+}
+
+.tick {
+  display: none;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  z-index: 1;
+}

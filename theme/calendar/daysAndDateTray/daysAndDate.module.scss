@@ -1,0 +1,63 @@
+$sharedHeight:20px;
+
+%sharedGridStyle {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    align-items: center;
+
+    div {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        font-size: 10px;
+    }
+}
+
+.mainContainer {
+    height: 100%;
+    width: 100%;
+    padding: 0px 12px;
+        
+    &__actionTray {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 10px;
+        color: #fd5914;
+        font-weight: 500;
+        margin: 10px 0px;
+
+        span {
+            cursor: pointer;
+        }
+    }
+}
+
+.daysTray {
+    @extend %sharedGridStyle;
+    font-size: 13px;
+    font-weight: 600;
+    color: #212121;
+}
+
+.datesTray {
+    @extend %sharedGridStyle;
+    margin: 3px;
+
+    div {
+        font-weight: 500;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        height: $sharedHeight;
+        width: $sharedHeight;
+
+
+        &:hover {
+            cursor: pointer;
+            outline: 1.4px rgb(1, 150, 136) solid;
+            box-sizing: border-box;
+        }
+    }
+}

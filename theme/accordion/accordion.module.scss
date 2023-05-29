@@ -1,0 +1,146 @@
+@mixin responsive($min_width, $max_width) {
+  @media only screen and (min-width: $min_width) and (max-width: $max_width) {
+    @content;
+  }
+}
+
+.icon {
+  font-size: 25px;
+  color: #7dbd3b;
+  margin-right: 10px;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+.title {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.accordion {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  border: none;
+
+  &::before {
+    box-shadow: none;
+    height: 0px;
+  }
+}
+
+.accordionSummaryForRightIcon {
+  padding: 16px 0;
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  .iconRight {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .arrowIcon {
+      transition: all 0.6s;
+    }
+
+    &.active {
+      .arrowIcon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.accordianDetails {
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+
+  &__active {
+    height: auto;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.accordionSummary {
+  padding: 5px 10px 5px 8px;
+  display: flex;
+  border: none;
+  background-color: #f5f5f5f1;
+  border-radius: 4px;
+}
+
+.accordionSummaryForNested {
+  // transition: max-height 0.6s ease;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  border: none;
+  background-color: #f1efefe8;
+  padding: 5px 5px;
+  border-radius: 4px;
+}
+
+.accordianContent {
+  // transition: max-height 0.6s ease;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 115px 110px 70px;
+  gap: 10px;
+  border: none;
+
+  @include responsive(0px, 1000px) {
+    grid-template-columns: 1fr 25% 15%;
+  }
+}
+
+.valueUnit {
+  color: #000000;
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word;
+}
+
+.alignLeft {
+  justify-content: left;
+}
+
+.alignRight {
+  justify-content: right;
+}
+
+.iconCopy {
+  margin-left: 0px;
+  margin-right: 40px;
+}
+
+.titleCopy {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contentParent {
+  overflow: hidden;
+  transition: height ease 0.5s;
+  // padding: 2px 20px 2px 20px;
+}
+.content {
+  // border: 1px solid rgb(128, 123, 123);
+  // padding: 0.5rem;
+  // border-radius: 5px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,36 @@
+$sharedColor:#fd5109;
+
+%sharedFlexStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mainContainer {
+    // background-color: green;
+    display: flex;
+
+    &__clearAllDiv {
+        @extend %sharedFlexStyle;
+        font-size: 15px;
+        cursor: pointer;
+        font-size: 11px;
+        padding: 1px 6px;
+        border: #e5e5e5 1px solid;
+        border-radius: 4px;
+        color: #837f7f;
+        
+        
+        
+        &__text,
+        &__icon {
+            @extend %sharedFlexStyle;
+        }
+        &__icon {
+            margin-right: 6px;
+            font-size: 16px;
+            color: $sharedColor;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import "../../styles/partials/mixin";
+@import "../../styles/partials/variables";
+
+.showRecipeCollectionsContainer {
+  width: 100%;
+  margin: 20px 0;
+  // container-type: inline-size;
+  // contain: content;
+}
+.showRecipeCollectionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.showRecipes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 16px;
+  grid-auto-rows: auto;
+
+  @include media(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media(_2xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.noRecipeFound {
+  min-height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bcbcbc;
+  font-weight: 600;
+}
+
+.paginationWarper {
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

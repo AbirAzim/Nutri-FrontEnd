@@ -1,0 +1,103 @@
+.singleNotificationContainer {
+  border: 1px solid #c1c1c1;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  .icon {
+    margin-right: 5px;
+  }
+}
+.recipeName {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s linear;
+  &:hover .leftSide img {
+    transform: scale(1.05);
+  }
+  &:hover .leftSide h3 {
+    color: #fe5d1f;
+  }
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s linear;
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      overflow: hidden;
+      object-fit: cover;
+    }
+    .heading {
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: color 0.3s linear;
+      width: 180px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 2rem;
+    }
+    .sharedBy {
+      color: #c1c1c1;
+      font-weight: 500;
+      margin-left: 10px;
+      font-size: 1.4rem;
+    }
+  }
+
+  .on {
+    color: #fe5d1f;
+  }
+  .off {
+    color: #c1c1c1;
+  }
+
+  .rightSide {
+    display: flex;
+    align-items: center;
+  }
+  .pointerEventNone {
+    pointer-events: none;
+  }
+  .star {
+    // font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+}
+
+.btnBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.noNotification {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .text {
+    width: 100%;
+    text-align: center;
+    color: #c1c1c1;
+    font-size: 1.4rem;
+    border: 1px solid #ececec;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+}

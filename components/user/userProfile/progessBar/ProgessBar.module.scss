@@ -1,0 +1,76 @@
+.sectionContainer {
+  width: 100%;
+  max-width: 900px;
+  padding-left: 20px;
+}
+
+.progessBarContainer {
+
+  h2 {
+    font-size: 34px;
+    line-height: 2;
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+
+    @media screen and (max-width: 900px) {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    text-align: center;
+    color: #ababab;
+    padding: 18px 0 48px 0;
+    margin: 0;
+  }
+}
+
+.progressbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding-bottom: 50px;
+}
+
+.step {
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #ececec;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  margin: 0 47px;
+  position: relative;
+}
+
+.finish::before {
+
+  background-color: #fe5d1f !important;
+
+}
+
+.active {
+  background-color: #fe5d1f;
+  color: #fff;
+}
+
+.step:before {
+  content: "";
+  height: 3px;
+  width: 94px;
+  background-color: #ececec;
+  position: absolute;
+  left: 36px;
+}
+
+.step_four:before {
+  display: none;
+}

@@ -1,0 +1,34 @@
+@import "../../../styles/partials/variables";
+@import "../../../styles/partials/mixin";
+.blogPageLayout {
+  width: 100%;
+  max-width: $_3xl;
+  margin: 20px auto;
+  padding: 0 10px;
+  min-height: 90vh;
+
+  @include media(lg) {
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+}
+
+.blogCardContainer {
+  width: 100%;
+  margin-top: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 16px;
+  grid-auto-rows: auto;
+
+  @include media(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media(_2xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

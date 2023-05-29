@@ -1,0 +1,73 @@
+@import "../../../styles/variables";
+
+.custom-checkbox {
+  display: flex;
+  align-items: flex-start;
+  user-select: none;
+  height: 2rem;
+  // width: 2rem;
+  // margin-bottom: 1.5rem;
+  cursor: pointer;
+  input {
+    display: none;
+
+    &:checked ~ .content:after {
+      opacity: 1;
+    }
+  }
+
+  .content {
+    padding-left: 3rem;
+    position: relative;
+    line-height: 2.2rem;
+
+    a {
+      color: $primaryColor;
+    }
+
+    h5 {
+      font-size: 20px;
+      margin: 0;
+    }
+    p {
+      font-size: 16px;
+      color: #666666;
+    }
+
+    &::before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid $darkGrey;
+      background-color: white;
+      border-radius: 5px;
+      left: 0;
+      top: 0;
+    }
+
+    &:after {
+      background: $primaryColor url(/images/checkmark.svg) no-repeat center;
+      background-size: 50%;
+      border-color: $primaryColor;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    &.content-header {
+      &::after {
+        background: $primaryColor url(/images/minus.svg) no-repeat center !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  &.empty {
+    margin: 0;
+    .content {
+      display: flex;
+      font-size: 0;
+      padding-left: 2rem;
+    }
+  }
+}

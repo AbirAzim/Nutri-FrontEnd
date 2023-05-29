@@ -1,0 +1,12 @@
+.addCommentsIcon {
+  // margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .text {
+    margin-right: 1rem;
+    font-weight: 600;
+    color: rgba(171, 171, 171, 0.9529411765);
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../../styles/variables";
+
+.field {
+  display: flex;
+  flex-direction: column;
+  & > h5 {
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.custom_radio {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  input {
+    display: none;
+
+    &:checked ~ .custom_radio_content:after {
+      transform: scale(0.5);
+    }
+  }
+
+  &_content {
+    padding-left: 45px;
+    position: relative;
+    line-height: 30px;
+
+    h5 {
+      font-size: 16px;
+      margin: 0;
+      font-weight: 200;
+    }
+    p {
+      font-size: 16px;
+      color: #666666;
+    }
+
+    &::before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: 2px solid $primaryColor;
+      background-color: white;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+    }
+
+    &:after {
+      background-color: $primaryColor;
+      transform: scale(0);
+      transition: 0.3s;
+    }
+  }
+}

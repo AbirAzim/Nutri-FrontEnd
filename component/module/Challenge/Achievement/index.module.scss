@@ -1,0 +1,45 @@
+.mainContainer {
+  position: relative;
+
+  &__contentDiv {
+    &__innerDiv {
+      display: flex;
+      justify-content: space-between;
+      &__challengeDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.challenge_circle_box {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+  border-radius: 9px;
+}
+
+.title {
+  font-size: 2.1rem;
+  height: 9rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+  h2 {
+    width: 100%;
+    text-align: left;
+    padding: 2rem 0;
+  }
+  hr {
+    border: 1px solid #eee;
+  }
+}

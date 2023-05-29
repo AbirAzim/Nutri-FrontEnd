@@ -1,0 +1,478 @@
+@import "../../../../styles/partials/variables";
+@import "../../../../styles/partials/mixin";
+
+$tooltip-margin: 30px;
+$tooltip-arrow-size: 6px;
+
+.blockPadding {
+  padding: 8px 0px;
+}
+.noBlockPadding {
+  padding: 0px !important;
+}
+.rotatedIcon180Deg {
+  transform: rotate(180deg);
+}
+
+.activeIcon {
+  color: $secondaryColor !important;
+}
+
+%block {
+  padding: 10px 0px;
+}
+
+%anchor {
+  text-decoration: none;
+  transition: all 0.5s;
+  color: $primaryColor;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+%sup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px 0 5px;
+  padding: 3px 6px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid $fontGray;
+  // box-shadow: 0 2px 0 0 rgb(29 32 43 / 15%), 0 4px 12px -3px rgb(29 32 43 / 15%);
+  border-radius: 5px;
+  user-select: none;
+  color: $secondaryColor;
+}
+
+%span {
+  font-size: inherit;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: inset 0 -7px 0 0 #e0edd2;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: inset 0 -25px 0 0 #eee;
+  }
+
+  &[data-tooltip] {
+    transition: all 0.3s;
+    position: relative;
+  }
+  &[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    padding: 1px 3px;
+    position: absolute;
+    left: 0;
+
+    white-space: nowrap;
+    z-index: 20;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: $secondaryColor;
+    color: #fff;
+    bottom: 100%;
+  }
+
+  &[data-tooltip]:hover::before {
+    content: " ";
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-width: $tooltip-arrow-size;
+    margin-left: calc(($tooltip-arrow-size) * -1);
+    top: 0;
+    border-top-color: $secondaryColor;
+  }
+}
+
+%paragraph {
+  font-size: 16px;
+  color: $fontDeepGray;
+  line-height: 24px;
+  i:not([data-icon_name]) {
+    font-style: italic;
+  }
+  i:is([data-icon_name]) {
+    color: $secondaryColor;
+  }
+  b {
+    font-weight: bold;
+  }
+}
+%mark {
+  background-color: #e0edd2;
+  color: $fontDeepGray;
+  border-radius: 6px;
+}
+
+%figcaption {
+  @extend %paragraph;
+  font-style: italic;
+  color: $fontGray;
+  font-size: 14px;
+}
+
+.h1 {
+  @extend %block;
+  font-size: 40px;
+  font-weight: bold;
+  color: $fontDeepGray;
+  @include media(md) {
+    font-size: 40px;
+  }
+  sup {
+    @extend %sup;
+  }
+  i:is([data-icon_name]) {
+    color: $secondaryColor;
+  }
+}
+
+.h2 {
+  @extend %block;
+  font-size: 30px;
+  font-weight: bold;
+  color: $fontDeepGray;
+  @include media(md) {
+    font-size: 38px;
+  }
+  sup {
+    @extend %sup;
+  }
+  i:is([data-icon_name]) {
+    color: $secondaryColor;
+  }
+}
+.h3 {
+  @extend %block;
+  font-size: 24px;
+  font-weight: bold;
+  color: $fontDeepGray;
+  @include media(md) {
+    font-size: 30px;
+  }
+  sup {
+    @extend %sup;
+  }
+  i:is([data-icon_name]) {
+    color: $secondaryColor;
+  }
+}
+
+.h4 {
+  @extend %block;
+  font-size: 20px;
+  font-weight: bold;
+  color: $fontDeepGray;
+  @include media(md) {
+    font-size: 24px;
+  }
+  sup {
+    @extend %sup;
+  }
+  i:is([data-icon_name]) {
+    color: $secondaryColor;
+  }
+}
+
+.paragraph {
+  @extend %block;
+  @extend %paragraph;
+  a {
+    @extend %anchor;
+  }
+  mark {
+    @extend %mark;
+  }
+  span {
+    @extend %span;
+  }
+  sup {
+    @extend %sup;
+  }
+}
+
+.toggle {
+  @extend %block;
+  .header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 5px;
+
+    .icon {
+      transition: transform linear 0.3s;
+      color: #484848;
+    }
+    .iconRotate {
+      transform: rotate(90deg);
+    }
+
+    .text {
+      padding-left: 10px;
+      font-weight: 500;
+      @extend %paragraph;
+      a {
+        @extend %anchor;
+      }
+      mark {
+        @extend %mark;
+      }
+      span {
+        @extend %span;
+      }
+      sup {
+        @extend %sup;
+      }
+      i:is([data-icon_name]) {
+        color: $secondaryColor;
+      }
+    }
+  }
+
+  .nestedContainer {
+    padding-left: 20px;
+  }
+}
+
+.list {
+  ul,
+  ol {
+    list-style: none;
+    @extend %block;
+    li {
+      margin-left: 40px;
+      @extend %paragraph;
+      sup {
+        @extend %sup;
+      }
+      i:is([data-icon_name]) {
+        color: $secondaryColor;
+      }
+      a {
+        @extend %anchor;
+      }
+      mark {
+        @extend %mark;
+      }
+    }
+  }
+  ol {
+    counter-reset: li;
+  }
+
+  ul li::before {
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+    background-color: $primaryColor;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    height: 8px;
+    width: 8px;
+  }
+
+  ol li::before {
+    content: counter(li);
+    color: $primaryColor;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    counter-increment: li;
+    font-weight: bold;
+  }
+}
+
+.blockquote {
+  padding: 20px;
+  background-color: #f4f7f1;
+  border-left: 3px solid $secondaryColor;
+  margin: 8px 0px;
+  p {
+    @extend %block;
+    @extend %paragraph;
+    a {
+      @extend %anchor;
+    }
+    mark {
+      @extend %mark;
+    }
+  }
+  footer {
+    @extend %figcaption;
+  }
+  sup {
+    @extend %sup;
+  }
+  i:is([data-icon_name]) {
+    color: $secondaryColor;
+  }
+}
+
+.image {
+  @extend %block;
+  width: 100%;
+  max-width: $md;
+  margin: auto;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  figcaption {
+    @extend %figcaption;
+  }
+}
+
+.columns {
+  @extend %block;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 10px;
+
+  @media (max-width: $md) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  @media (max-width: $sm) {
+    grid-template-columns: 1fr !important;
+  }
+}
+.table {
+  @extend %block;
+}
+
+.callout {
+  @extend %block;
+  // font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  // color: #41314e;
+  line-height: 1.6em;
+  font-size: 16px;
+  background-color: #e0edd2;
+  border: 1px solid #f6f8fa;
+  box-shadow: none;
+  white-space: pre;
+  word-wrap: normal;
+  overflow-x: auto;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  .icon {
+    margin-right: 0.8rem;
+    font-size: 20px;
+  }
+  .text {
+    margin: 0;
+    padding: 0;
+    // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    white-space: pre-wrap;
+    @extend %paragraph;
+    a {
+      @extend %anchor;
+    }
+    mark {
+      @extend %mark;
+    }
+    sup {
+      @extend %sup;
+    }
+    i:is([data-icon_name]) {
+      color: $secondaryColor;
+    }
+  }
+}
+
+.footnotes {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sectionDivider {
+  background-color: white;
+  padding: 20px;
+  border-radius: 14px;
+  -webkit-box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.readMoreBox {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #484848;
+  transition: all 0.3s;
+  .icon {
+    margin-right: 5px;
+    transition: all 0.3s;
+  }
+}
+
+.showMoreText {
+  font-size: 14px;
+  color: #484848;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footnotesContainer {
+  .footnoteHeading {
+    font-weight: 500;
+    font-size: 20px;
+    color: #484848;
+  }
+  .footnoteContentWrapper {
+    padding-top: 10px;
+    .footnoteConten {
+      font-size: 16px;
+      color: #484848;
+      line-height: 24px;
+    }
+  }
+}
+
+.showHeadingThreeTitleBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .headingThreeTitle {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondaryColor;
+    border: 1px solid $secondaryColor;
+    padding: 3px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #d2e7bc;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+.animateBlock {
+  background-color: #d2e7bc !important;
+}

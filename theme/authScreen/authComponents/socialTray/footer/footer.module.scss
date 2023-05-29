@@ -1,0 +1,493 @@
+.mainScreen {
+  // position: relative;
+  display: block;
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  // background-color: aqua;
+}
+
+.mainDiv {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  height: 95vh;
+  // min-height: 95vh;
+  // background-color: rgb(255, 47, 47);
+}
+
+.inputMainDiv {
+  // position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #f5f5f5;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover;
+  padding: 50px 52px;
+}
+
+.inputContentDiv {
+  display: block;
+  // background-color: #d4d5f1;
+  height: 100%;
+  width: 100%;
+
+  h2 {
+    background-color: #189128;
+    margin-top: 2px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+
+  .quickLogin {
+    display: none;
+  }
+
+  p {
+    color: #000;
+    line-height: 2;
+    letter-spacing: 0.72px;
+    font-weight: 400;
+    text-align: left;
+    background-color: transparent;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 20px 0px;
+  }
+
+  .forgetPassword {
+    // background-color: #8db993;
+    margin-left: auto;
+    width: fit-content;
+    margin-top: 16px;
+    font-size: 18px;
+    color: #929292;
+    transition: all 0.3s ease 0s;
+
+    div {
+      display: none;
+    }
+  }
+
+  .buttonDiv {
+    height: 60px;
+    width: 250px;
+    margin: 40px auto;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+
+  .seperatorLogin {
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    border-bottom: solid 1px #e9ecef;
+
+    &:before {
+      content: "or";
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #8995ac;
+      font-size: 16px;
+      top: 50%;
+      background-color: #f5f5f5;
+      padding: 0px 10px;
+      font-family: "Segoe UI";
+    }
+  }
+
+  .forgotPassPara {
+    width: 50%;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: normal;
+  }
+}
+
+.logo {
+  display: block;
+  // background-color: rgb(8, 160, 76);
+  width: 100%;
+  height: 100px;
+  position: relative;
+  margin-top: 10px;
+  // height: 150px;
+  // padding: 40px;
+
+  div {
+    // background-color: yellow;
+    width: 190px;
+    height: auto;
+  }
+}
+
+.imgMainDiv {
+  position: relative;
+  display: block;
+  background-position-x: left;
+  background-position-y: center;
+  background-size: cover;
+  width: 50%;
+  min-height: 95vh;
+  height: auto;
+  background-color: #f5f5f5;
+  // overflow: hidden;
+
+  .imgContentDiv {
+    display: block;
+    position: relative;
+    // background-color: aqua;
+    margin: 0 auto;
+    height: 100%;
+    width: 55%;
+  }
+
+  .contentCard {
+    position: relative;
+    // background-color: rgb(29, 194, 117);
+    height: 235px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    // margin
+    // display: 100%;
+
+    h2 {
+      display: block;
+      padding: 0;
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+      // background-color: #212529;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 2;
+      color: #fff;
+      padding: 30px 0 50px 0;
+      word-wrap: break-word;
+      text-align: center;
+    }
+
+    & .buttonRightDiv {
+      // background-color: chartreuse;
+      height: 60px;
+      width: 250px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.footerDiv {
+  // margin-top: auto;
+  // position: absolute;
+  // bottom: 0;
+  height: 5vh;
+  width: 100%;
+  background-color: #ececec;
+  text-align: center;
+  padding: 5px;
+
+  & p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+  }
+}
+
+// .signupImgContentDiv {
+//     .logo{
+//         margin: 0;
+//     }
+//     display: block;
+//     position: relative;
+
+// }
+
+.signupContentCard {
+  position: absolute;
+  margin-top: 10px;
+  background-color: rgb(88, 73, 6);
+  height: 300px;
+}
+
+.signupContentDiv {
+  h2 {
+    margin-top: 30px;
+  }
+}
+
+.signUpButtonDiv {
+  height: 60px;
+  width: 250px;
+  margin: 60px auto 90px auto;
+  cursor: pointer;
+}
+
+//
+@media screen and (max-width: 780px) {
+  .mainScreen {
+    position: relative;
+    height: 100%;
+  }
+
+  .mainDiv {
+    display: block;
+    width: 100%;
+    height: 100%;
+    // background-color: yellow;
+  }
+
+  .inputMainDiv {
+    display: block;
+    width: 100%;
+    height: 76vh;
+    background-color: rgb(255, 255, 255);
+    padding: 0 22px;
+    align-items: center;
+
+    h2 {
+      // background-color: green;
+      margin-top: 6px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .loginPara {
+      display: none;
+    }
+
+    .quickLogin {
+      display: block;
+      // background-color: green;
+      width: 100%;
+      margin: 22px auto;
+      font-size: 14px;
+
+      span {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        // background-color: yellow;
+      }
+
+      div {
+        margin: 24px auto 10px auto;
+      }
+    }
+  }
+
+  .inputContentDiv {
+    // background-color: green;
+    .logo {
+      // background-color: red;
+      width: fit-content;
+      margin: 10px auto 2px auto;
+    }
+
+    .forgetPassword {
+      display: flex;
+      justify-content: space-between;
+      // background-color: #8db993;
+      // margin-left: auto;
+      width: 100%;
+      margin: 28px 4px 10px auto;
+      font-size: 12px;
+
+      div {
+        position: relative;
+        display: block;
+        height: fit-content;
+        width: fit-content;
+        // background-color: rgb(16, 26, 2);
+
+        input {
+          position: absolute;
+          margin: auto;
+          height: 16px;
+          width: 16px;
+          // background-color: greenyellow;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        label {
+          // background-color: red;
+          margin-left: 24px;
+        }
+      }
+    }
+
+    .buttonDiv {
+      height: 60px;
+      width: 200px;
+      margin: 20px auto;
+      cursor: pointer;
+      // background-color: yellow;
+    }
+
+    .lineSocialDiv {
+      display: none;
+    }
+  }
+
+  .imgMainDiv {
+    width: 100%;
+    height: 100vh;
+
+    // margin-top: 200px;
+    .imgContentDiv {
+      // background-color: red;
+      position: relative;
+      width: 40%;
+    }
+
+    .contentCard {
+      position: relative;
+      // background-color: rgb(29, 194, 117);
+      height: 200px;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 14px;
+        padding: 20px 4px 0px 4px;
+        // width: ;
+      }
+
+      .buttonRightDiv {
+        height: 60px;
+        width: 200px;
+        margin: 20px auto;
+        // background-color: yellow;
+      }
+    }
+
+    //sign up page
+
+    .signupContentCard {
+      width: 100%;
+    }
+  }
+
+  .footerDiv {
+    // background-color: rgb(150, 74, 74);
+    // position: relative;
+    display: none;
+  }
+}
+
+//only forget password screen related css that is not on any other screen
+
+@media screen and (min-width: 770px) and (max-width: 1000px) {
+  .inputMainDiv {
+    // background-color: green;
+    height: 100%;
+    padding: 70px 33px;
+    // z-index: 1;
+  }
+
+  .inputContentDiv {
+    background-color: grey;
+    height: auto;
+
+    .logo {
+      width: 100%;
+      margin: 10px auto 0px auto;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 0px;
+    }
+
+    p {
+      font-size: 14px;
+      padding: 20px 0; // width: ;
+    }
+
+    .forgetPassword {
+      margin: 14px 4px 0px auto;
+      // background-color: green;
+    }
+
+    .buttonDiv {
+      height: 50px;
+      width: 170px;
+      margin: 20px auto;
+      cursor: pointer;
+      // background-color: yellow;
+    }
+
+    .lineSocialDiv {
+      // background-color: yellow;
+      margin: 40px auto;
+    }
+  }
+
+  .imgMainDiv {
+    width: 50%;
+
+    .imgContentDiv {
+      // background-color: red;
+      width: 80%;
+      position: relative;
+    }
+
+    .contentCard {
+      // position: absolute;
+      // background-color: green;
+      height: 200px;
+      padding-top: 30px;
+
+      h2 {
+        // background-color: yellow;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        padding: 16px 4px 16px 4px;
+        // margin: 30px auto;
+        // width: ;
+      }
+
+      .buttonRightDiv {
+        height: 50px;
+        width: 170px;
+        margin: 10px auto;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .footerDiv {
+    // background-color: rgb(167, 206, 144);
+    position: relative;
+    display: block;
+  }
+}

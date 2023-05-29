@@ -1,0 +1,53 @@
+@import "../../../styles/partials/mixin";
+@import "../../../styles/partials/variables";
+
+.main__slider {
+  margin-bottom: 40px;
+
+  @media only screen and (max-width: 980px) {
+    margin-bottom: 20px;
+  }
+
+  .headingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .heading {
+      display: flex;
+      align-items: center;
+
+      .title {
+        font-weight: 500;
+        font-size: 22px;
+        color: $primaryColor;
+        padding-left: 1rem;
+
+        @media only screen and (max-width: 500px) {
+          font-size: 18px;
+          min-width: 200px;
+        }
+      }
+    }
+
+    .viewAll {
+      font-size: 14px;
+      border-bottom: 1px solid transparent;
+      color: $secondaryColor;
+      cursor: pointer;
+      padding: 4px;
+      transition: all 0.3s ease 0s;
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-position: left;
+
+      &:hover {
+        background-position: right;
+        color: $primaryColor;
+        border-bottom: 1px solid $primaryColor;
+      }
+    }
+  }
+}

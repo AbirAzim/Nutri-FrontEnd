@@ -1,0 +1,56 @@
+$sharedLength:45px;
+$sharedPadding:0px 10px;
+$sharedColor:#fd5109;
+
+@mixin lineClampMixin($clamLine) {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    -webkit-line-clamp: $clamLine;
+    -webkit-box-orient: vertical;
+}
+
+.mainContainer {
+    min-height: $sharedLength;
+    display: flex;
+    background-color: white;
+    margin: 10px 0px;
+
+    &__image {
+        position: relative;
+        min-height: $sharedLength;
+        min-width: $sharedLength;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 12px;
+        overflow: hidden;
+
+        &__heading {
+            height: 20px;
+            color: $sharedColor;
+            padding: $sharedPadding;
+            cursor: pointer;
+            @include lineClampMixin(1);
+        }
+
+        &__content {
+
+            height: fit-content;
+            line-height: 15px;
+            padding: $sharedPadding;
+            color: #818181;
+            font-size: 10px;
+            font-weight: 300;
+            @include lineClampMixin(2);
+        }
+    }
+}

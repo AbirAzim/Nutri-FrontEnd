@@ -1,0 +1,14 @@
+$mainColorVar:#fe5d1f;
+
+.mainOutline{
+    border: 1px $mainColorVar solid;
+    width: 100px;
+    padding: 4px 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: $mainColorVar;
+    font-weight: 400;
+}

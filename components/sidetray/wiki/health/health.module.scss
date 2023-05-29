@@ -1,0 +1,23 @@
+.nutrition{
+    margin-top: 30px;
+    font-size: 13px;
+
+    ul{
+        list-style: none;
+        padding-left: 10px;
+        color: #7d7d7d;
+        margin-top: 20px;
+
+        li{
+            height: 30px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.dropdown{
+    border: none;
+    font-size: 15px;
+    color: #7d7d7d;
+}

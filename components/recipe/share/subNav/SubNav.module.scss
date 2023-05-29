@@ -1,0 +1,47 @@
+.subNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  &__discover {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover &__icon,
+    &:hover p {
+      color: #fe5d1f !important;
+    }
+    &__icon {
+      margin-right: 5px;
+      cursor: pointer;
+      width: 27px;
+      color: #000;
+    }
+    p {
+      color: #000 !important;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+  &__compare {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover &__icon,
+    &:hover p {
+      color: #fe5d1f !important;
+    }
+    &__icon {
+      margin: 0 10px 0px 6px;
+      width: 30px;
+      cursor: pointer;
+      color: #000;
+    }
+    p {
+      color: #000;
+      font-weight: 500;
+    }
+  }
+}

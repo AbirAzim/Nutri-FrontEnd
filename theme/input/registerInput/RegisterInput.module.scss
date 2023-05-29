@@ -1,0 +1,85 @@
+@import "../../../styles/variables";
+
+.input {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  height: 50px;
+  font-size: 16px;
+  color: $lightTextColor;
+  letter-spacing: 0.5px;
+  line-height: 16px;
+  font-weight: 300;
+  padding: 6px 12px;
+  font-weight: normal;
+  transition: border 0.3s linear;
+  &:focus,
+  &:hover {
+    border: 1px solid #fe5d1f;
+    outline: none;
+  }
+  &::placeholder {
+    color: #c8c8c8;
+  }
+
+  &::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: #c8c8c8;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #c8c8c8;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #c8c8c8;
+  }
+}
+
+.passwordDiv {
+  display: flex;
+  position: relative;
+
+  input {
+    display: block;
+    position: relative;
+    color: $lightTextColor;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  input::-ms-reveal {
+    display: none;
+  }
+
+  svg {
+    margin: 0;
+    display: block;
+    // top: 100%;
+  }
+
+  & .visiIconDiv {
+    display: block;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-size: 22px;
+    color: #bcbcbc;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: scaleX(-1) translateY(-50%) !important;
+    cursor: pointer;
+
+    //temp css till icon images arnt present
+    -moz-transform: scaleX(-1) translateY(-50%);
+    -webkit-transform: scaleX(-1) translateY(-50%);
+    -ms-transform: scaleX(-1) translateY(-50%);
+
+    svg {
+      transform: scale(0.75);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+$sharedColor:#fd5109;
+
+%sharedFlexStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mainContainer {
+    position: relative;
+
+    &__tray {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &__type {
+            cursor: pointer;
+            font-size: 15px;
+            cursor: pointer;
+            font-size: 10px;
+            padding: 2px 6px;
+            border: #e5e5e5 1px solid;
+            border-radius: 4px;
+            @extend %sharedFlexStyle;
+            
+            &__text{
+                color: #837f7f;
+            }
+
+            &__arrow {
+                margin: 0px 5px 0px 10px;
+                color: $sharedColor;
+            }
+
+            &__search {
+
+                cursor: pointer;
+                font-size: 16px;
+                color: $sharedColor;
+            }
+        }
+    }
+}

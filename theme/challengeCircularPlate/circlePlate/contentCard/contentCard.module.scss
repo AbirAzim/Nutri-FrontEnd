@@ -1,0 +1,78 @@
+$sharedMargin:10%;
+$sharedColor:#b5b5b5;
+$sharedColor1:#9ac740;
+
+%sharedFlexStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainContainer {
+
+    height: fit-content;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__contentTray {
+        @extend %sharedFlexStyle;
+        margin-bottom: $sharedMargin;
+
+        &__imageDiv {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+
+        }
+
+        h4 {
+            color: $sharedColor;
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 14px
+        }
+    }
+
+    &__daysContainer {
+        @extend %sharedFlexStyle;
+
+
+        &__daysRemaining {
+            background-color: $sharedColor1;
+            border-radius: 30px;
+            padding: 2px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: $sharedColor;
+            font-weight: 400;
+            font-size: 30px;
+        }
+    }
+
+    &__percentageScore {
+        @extend %sharedFlexStyle;
+        margin-top: 10px;
+        color: $sharedColor1;
+
+        &__score {
+            font-size: 25px;
+        }
+
+        &__scoreText {
+            margin-top: 0px;
+        }
+    }
+
+}

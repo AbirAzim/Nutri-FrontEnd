@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon Icon -->
+        <link rel="shortcut icon" href="assets/images/fav.png" type="image/png">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/material-icon.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/jquery.multilevelpushmenu.css">
+        <link rel="stylesheet" href="assets/css/covermode.css">
+        <link rel="stylesheet" href="assets/css/hover.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/style-one.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/responsive-one.css">
+        <link rel="stylesheet" href="assets/css/mobile-app-one.css">
+        <link rel="stylesheet" href="assets/css/mobile-app.css">
+        <title>Blending 101</title>
+    </head>
+  <body class="app-white-bg">
+    <div class="preloader">
+		<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple" style="background:0 0">
+			<circle cx="50" cy="50" r="4.719" fill="none" stroke="#1d3f72" stroke-width="2">
+				<animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="-1.5s" repeatCount="indefinite" />
+				<animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="-1.5s" repeatCount="indefinite" /> </circle>
+			<circle cx="50" cy="50" r="27.591" fill="none" stroke="#5699d2" stroke-width="2">
+				<animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="0s" repeatCount="indefinite" />
+				<animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="0s" repeatCount="indefinite" /> </circle>
+		</svg>
+	</div>
+    <header class="page-header prof-comp-header d-none-767">
+        <div class="container-lg">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/logo.png" alt="logo" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-feature" href="#">Features</a>
+                        </li>
+                                          
+                      </ul>
+                      <div class="profile-top-main">
+                        <div class="dropdown">
+                           <div class="profile-drp-toggle dropdown-toggle" data-toggle="dropdown">
+                              <div class="user-row-drpwn d-flex align-items-center">
+                                 <figure class="user-img-wrp"> <img src="assets/images/user-profile.png" alt="User Profile"> </figure>
+                                 <span class="user-name-bx">
+                                 <span class="wlcm-text-user">
+                                 Welcome
+                                 <strong>Gabriel <span class="down-angle-icon"><img src="assets/images/down-angle.svg" alt="Down angle"></span> </strong>
+                                 </span>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="dropdown-menu"> <a class="dropdown-item" href="profile-completion.html">My Profile <span class="material-icons-outlined">
+                              account_circle
+                              </span></a> <a class="dropdown-item" href="#">Admin <span class="material-icons-outlined">
+                              admin_panel_settings
+                              </span></a> <a class="dropdown-item" href="help.html">Help <span class="material-icons-outlined">
+                              help_outline
+                              </span></a> <a class="dropdown-item" href="#">
+                              Logout <span class="material-icons-outlined">
+                              logout
+                              </span>
+                              </a> 
+                           </div>
+                        </div>
+                     </div>
+                    </div>
+                </nav>
+        </div>
+    </header>
+
+    <section class="profile-wrap">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-md-12 p-sm-0">
+                    <div class="profile-content">
+                        <h2 class="page-heading-md d-none-767">Complete Your Profile</h2>
+                        <p class="page-title-xs d-none-767">No more generic 2,000 calorie recommended daily intake nutrition labels.</p>
+                        <div class="profile-tabs-wrap">
+                            <div class="tab-main-row">
+                                <form id="msform">
+                                    <!-- progressbar -->
+                                        <div class="step-wrp-top" id="progressbar">
+                                            <div class="step step-one active">
+                                                <span class="step-no">1</span>
+                                            </div>
+                                            <div class="step step-two">
+                                                <span class="step-no">2</span>
+                                            </div>
+                                            <div class="step step-three">
+                                                <span class="step-no">3</span>    
+                                            </div>
+                                            <div class="step step-four">
+                                                <span class="step-no">4</span>
+                                            </div>
+                                        </div>
+                                        
+                                    <!-- fieldsets -->
+                                    <fieldset class="container-sm card-bg">
+                                        <div class="app-profile-content text-center">
+                                            <h2 class="grey-bg-heading">About You</h2>
+                                            <p class="app-text-blk">No more generic 2,000 calorie recommended <br/> daily intake nutrition labels.</p>
+                                        </div>
+                                        <div class="profile-tabs-Content mb-90 d-none-767">
+                                            <div class="select-options-wrap select-gender">
+                                                <h2 class="page-heading-sm">Select Your Gender</h2>
+                                                <ul class="d-flex justify-content-around">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/mars-1.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Male</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="active">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/femenine.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Female</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/mars-2.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Others</h2>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="reading-section">
+                                                <h2 class="page-heading-sm">How old are you?</h2>
+                                                <div class="reading-img">
+                                                    <img src="assets/images/age-scale.png" alt="img" class="img-fluid" />
+                                                </div>
+                                                <h3 class="orange-heading-xs">45 years old</h3>
+                                            </div>
+                                            <div class="reading-section">
+                                                <h2 class="page-heading-sm">What's your current weight?</h2>
+                                                <div class="reading-img">
+                                                    <img src="assets/images/weight-scale.png" alt="img" class="img-fluid" />
+                                                </div>
+                                                <h3 class="orange-heading-xs">185 pounds</h3>
+                                            </div>
+                                            <div class="reading-section">
+                                                <h2 class="page-heading-sm">What's your current height?</h2>
+                                                <div class="reading-img">
+                                                    <img src="assets/images/height-scale.png" alt="img" class="img-fluid" />
+                                                </div>
+                                                <h3 class="orange-heading-xs">5 feet 11 inches</h3>
+                                            </div>
+                                            <div class="select-options-wrap select-activity">
+                                                <h2 class="page-heading-sm">Your Activity</h2>
+                                                <ul class="d-flex justify-content-around">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/ski-lift-regular.png" alt="icon" />
+                                                            </div>
+                                                            
+                                                            <h2 class="page-heading-xs">Low</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="active">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/walking-regular-1.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Moderate</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/running-regular.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">High</h2>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="app-pro-tab-content p-15">
+                                            <div class="app-select-option pb-40">
+                                                <h2 class="page-heading-sm">Your Gender</h2>
+                                                <ul>
+                                                    <li>
+                                                        <img src="assets/images/app-images/img1.svg" alt="img" />
+                                                        <p>Male</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/images/app-images/img2.svg" alt="img" />
+                                                        <p>Female</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/images/app-images/img3.svg" alt="img" />
+                                                        <p>Other</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="app-reading-section pb-40">
+                                                <div class="d-flex align-items-center">
+                                                    <h2 class="page-heading-sm">Your Age</h2>
+                                                    <div class="input-num-wrap">
+                                                        <input type="number" value="45">
+                                                        <label>years old</label>
+                                                    </div>
+                                                </div>
+                                                
+                                               
+                                            </div>
+                                            <div class="app-reading-section pb-40">
+                                                
+                                                <div class="d-flex align-items-center">
+                                                    <h2 class="page-heading-sm">Your Weight</h2>
+                                                    <div class="input-num-wrap">
+                                                        <input type="number" value="185">
+                                                        <label>pounds</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="app-reading-section pb-40">
+                                                
+                                                <div class="d-flex align-items-center">
+                                                    <h2 class="page-heading-sm">Your Height</h2>
+                                                    <div class="input-num-wrap">
+                                                        <input type="number" value="5">
+                                                        <label>feet</label>
+                                                    </div>
+                                                    <div class="input-num-wrap">
+                                                        <input type="number" value="11">
+                                                        <label>inches</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="app-select-option pb-40">
+                                                <h2 class="page-heading-sm">Your Activity</h2>
+                                                <ul>
+                                                    <li>
+                                                        <img src="assets/images/app-images/ski-lift-regular.svg" alt="img" />
+                                                        <p>Male</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/images/app-images/walking-regular.svg" alt="img" />
+                                                        <p>Female</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/images/app-images/running-regular.svg" alt="img" />
+                                                        <p>Other</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <input type="button" class="action-button app-black-txt-btn orange-txt-btn" value="Back">
+                                        <input type="button" name="next" class="next action-button app-black-txt-btn orange-bg-btn" value="Next">
+                                    </fieldset>
+                                    <fieldset class="container-sm card-bg">  
+                                        <div class="app-profile-content text-center">
+                                            <h2 class="grey-bg-heading">Dietary</h2>
+                                        </div>
+                                        <div class="profile-tabs-Content mb-90 p-15-30">
+                                            <div class="select-options-wrap select-lifestyle">
+                                                <h2 class="page-heading-sm">Which dietary lifestyle applies to you?</h2>
+                                                <ul>
+                                                    <li class="col-md-3">
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/healthy-food.png" alt="icon" />
+                                                            </div>
+                                                            
+                                                            <h2 class="page-heading-xs">Low Fodmap</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li class="col-md-3">
+                                                        <a href="#" class="active">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/avocado-1.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Ketogenic</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li class="col-md-3">
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/milk.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Vegetarian<br /> Dairy</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li class="col-md-3">
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/vegetarian.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Vegetarian<br /> No Dairy</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li class="col-md-3">
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/leaf.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Vegetarian<br /> No Dairy</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li class="col-md-3">
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/chicken.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Vegetarian<br /> No Dairy</h2>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="select-options-wrap select-allergies mt-90">
+                                                <h2 class="page-heading-sm">Which allergies do you have?</h2>
+                                                <ul>
+                                                    <li class="col-md-3">
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/milk-bottle.png" alt="icon" />
+                                                            </div>
+                                                            
+                                                            <h2 class="page-heading-xs">Low</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li class="col-md-3">
+                                                        <a href="#" class="active">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/peanut.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">Moderate</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li class="col-md-3">
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/almond.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">High</h2>
+                                                        </a>
+                                                    </li>
+                                                    <li class="col-md-3">
+                                                        <a href="#">
+                                                            <div class="img-bg">
+                                                                <img src="assets/images/soy-1.png" alt="icon" />
+                                                            </div>
+                                                            <h2 class="page-heading-xs">High</h2>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <input type="button" name="previous" class="previous action-button app-black-txt-btn orange-txt-btn" value="Back">
+                                        <input type="button" name="next" class="next action-button app-black-txt-btn orange-bg-btn" value="Next">
+                                    </fieldset>
+                                    <fieldset class="container-sm card-bg">
+                                        <div class="app-profile-content text-center">
+                                            <h2 class="grey-bg-heading">Healthcare</h2>
+                                            <p class="app-text-blk">This information is used to provide warning of <br /> potential adverse medication interaction with <br /> blend ingredients.</p>
+                                        </div>
+                                        <div class="profile-tabs-Content mb-90 p-15">
+                                            <div class="profile-tabs-form">
+                                                <h2 class="page-heading-sm">What are your pre-existing medical conditions?</h2> 
+                                                <div class="form-group col-md-10 mt-55">
+                                                    <input type="email" class="form-control" placeholder="Enter Conditions...">
+                                                    <div class="form-labels-wrap mb-90">
+                                                        <div class="form-label-content">
+                                                            <span class="label-text">
+                                                                Hypertension
+                                                                <span class="label-icon"></span>
+                                                            </span> 
+                                                        </div>
+                                                        <div class="form-label-content">
+                                                            <span class="label-text">
+                                                                Asthma
+                                                                <span class="label-icon"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                            <div class="profile-tabs-form">
+                                                <h2 class="page-heading-sm">What medications are you currently taking?</h2> 
+                                                <div class="form-group col-md-10 mt-55">
+                                                    <input type="email" class="form-control" placeholder="Enter Medications...">
+                                                    <div class="form-labels-wrap mb-90">
+                                                        <div class="form-label-content">
+                                                            <span class="label-text">
+                                                                Prinivil
+                                                                <span class="label-icon"></span>
+                                                            </span> 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                        <input type="button" name="previous" class="previous action-button app-black-txt-btn orange-txt-btn" value="Back">
+                                        <input type="button" name="next" class="next action-button app-black-txt-btn orange-bg-btn" value="Next">
+                                    </fieldset>
+                                    <fieldset class="container-sm card-bg">
+                                        <div class="app-profile-content text-center">
+                                            <h2 class="grey-bg-heading">Goals</h2>
+                                            <p class="app-text-blk">Select all the goals you with like to achieve with <br/> Blending101</p>
+                                        </div>
+                                        <div class="profile-tabs-Content mb-55 p-15">
+                                            <div class="profile-tabs-form">
+                                                <h2 class="page-heading-sm">Select all the goals you with like to achieve with Blending 101</h2> 
+                                                <div class="form-label-group mt-55">
+                                                    <div class="form-label-content">
+                                                        <span class="label-text">
+                                                            Loose Weight
+                                                        </span> 
+                                                    </div>
+                                                    <div class="form-label-content">
+                                                        <span class="label-text">
+                                                            Save time
+                                                        </span> 
+                                                    </div>
+                                                    <div class="form-label-content">
+                                                        <span class="label-text selected">
+                                                            Prevent Disease
+                                                        </span> 
+                                                    </div>
+                                                    <div class="form-label-content">
+                                                        <span class="label-text selected">
+                                                            Make tastier blends
+                                                        </span> 
+                                                    </div>
+                                                </div>
+                                                <div class="form-label-group">
+                                                    <div class="form-label-content">
+                                                        <span class="label-text">
+                                                            Treat Existing Condition
+                                                        </span> 
+                                                    </div>
+                                                    <div class="form-label-content">
+                                                        <span class="label-text">
+                                                            Treat Existing Condition
+                                                        </span> 
+                                                    </div>
+                                                    <div class="form-label-content">
+                                                        <span class="label-text">
+                                                            Get more nutrition
+                                                        </span> 
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="form-label-group">
+                                                    <div class="form-label-content">
+                                                        <span class="label-text selected">
+                                                            Reduce dependence on medications
+                                                        </span> 
+                                                    </div>
+                                                    <div class="form-label-content">
+                                                        <span class="label-text">
+                                                            Less Food Waste
+                                                        </span>
+                                                    </div>
+                                                    <div class="form-label-content">
+                                                        <span class="label-text">
+                                                            Workouts booster
+                                                        </span>
+                                                    </div>    
+                                                </div>  
+                                                <div class="form-label-group">
+                                                    <div class="form-label-content">
+                                                        <span class="label-text">
+                                                            Healthier kids
+                                                        </span>
+                                                    </div> 
+                                                    <div class="form-label-content">
+                                                        <span class="label-text">
+                                                            Eat more fruits and vegetables
+                                                        </span>
+                                                    </div>   
+                                                </div>
+                                            </div>     
+                                        </div>
+                                        <input type="button" name="previous" class="previous action-button app-black-txt-btn orange-txt-btn" value="Back">
+                                        <input type="button" class="action-button app-black-txt-btn orange-bg-btn" value="Finish">
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer d-none-767">
+        <div class="footer-wrap">
+            <p>Copywrite © 2021 Blending 101</p>
+        </div>
+    </footer>
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.multilevelpushmenu.min.js"></script>
+    <script src="assets/js/covermode.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+</body>
+</html>

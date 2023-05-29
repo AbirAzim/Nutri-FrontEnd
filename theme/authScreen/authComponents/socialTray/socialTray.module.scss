@@ -1,0 +1,42 @@
+.socialWrap {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  height: 60px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+  .listElem {
+    // background-color: greenyellow;
+    display: block;
+    height: 100%;
+    width: fit-content;
+
+    a,
+    img {
+      // background-color: blueviolet;
+      position: relative;
+      display: block;
+      height: 100%;
+      width: 60px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .socialWrap {
+    margin: 20px auto 0 auto;
+
+    .listElem {
+      // background-color: skyblue;
+      margin: 0 10px;
+
+      a {
+        width: 52px;
+      }
+    }
+  }
+}

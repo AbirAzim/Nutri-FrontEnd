@@ -1,0 +1,34 @@
+@import "../../../styles/partials/variables";
+@import "../../../styles/partials/mixin";
+.main {
+  min-height: 90vh;
+  width: 100%;
+  max-width: $_2xl;
+  padding: 0 10px;
+  margin: 40px auto 20px auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 16px;
+
+  .left {
+    order: 2;
+  }
+  .center {
+    order: 1;
+    .section {
+      margin-top: 3rem;
+    }
+  }
+
+  @include media(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    padding: 0 16px;
+    .left {
+      order: 1;
+    }
+    .center {
+      order: 2;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.menu__inner{
+    display: flex;
+    position: relative;
+}
+.menu *{
+    transition: all;
+    transition-duration: .5s;
+}
+.menu__child{
+    color: #828282;
+    font-size: 13px;
+    line-height: 14px;
+    border: none;
+    position: relative;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.menu__child:not(:last-child){
+    margin-right: 15px;
+}
+.line{
+    position: absolute;
+    content: " ";
+    height: 3px;
+    background-color: #FE5D1F;
+    bottom: 0;
+    left: 276px;
+}

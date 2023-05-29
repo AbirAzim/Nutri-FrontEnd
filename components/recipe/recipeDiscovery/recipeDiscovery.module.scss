@@ -1,0 +1,50 @@
+@import "../../../styles/variables";
+@import "../../../styles/partials/mixin";
+
+.main__div {
+  // display: flex;
+  // flex-direction: column;
+  min-height: 90vh;
+  width: 100%;
+  max-width: $_3xl;
+  margin: 20px auto;
+  padding: 0 10px;
+  position: relative;
+  transition: $transition;
+
+  @include media(lg) {
+    padding: 0 16px;
+  }
+}
+
+.main__tray {
+  margin: 30px 0px;
+  min-height: 100%;
+
+  @include media(lg) {
+    margin: 30px 20px;
+  }
+}
+
+.slider__card {
+  padding-right: 10px;
+
+  @include media(sm) {
+    padding-right: 10px;
+  }
+}
+
+.footerMainDiv {
+  margin-top: auto;
+  width: 100%;
+  min-width: 100px;
+}
+
+.move {
+  margin-left: 310px;
+  transition: all 0.3s;
+}
+
+.back {
+  transition: all 0.3s;
+}

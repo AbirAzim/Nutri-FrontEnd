@@ -1,0 +1,191 @@
+$orange_card_font: #ffffff;
+
+.orange__card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100%;
+  min-height: 270px;
+  border-radius: 10px;
+  background-color: #fe5d1f;
+  margin-top: 60px;
+  transition: all 0.5s;
+  // height: auto;
+
+  @media only screen and (max-width: 500px) {
+    min-width: 220px;
+    // background-color: rgb(223, 75, 75);
+    min-height: fit-content;
+  }
+
+  @media only screen and (min-width: 500px) and (max-width: 700px) {
+    height: auto;
+    // min-height: 20vh;
+    min-height: 200px;
+    // background-color: #fe5d1f;
+  }
+
+  @media only screen and (min-width: 700px) and (max-width: 980px) {
+    min-height: 200px;
+  }
+
+  // @media only screen and (min-width: 980px) and (max-width: 1290px) {
+  //     min-height: 200px;
+  // }
+
+  &__left {
+    display: block;
+    padding: 20px 20px 20px 40px;
+    // background-color: rgb(139, 179, 106);
+    flex-grow: 1;
+    // min-width: 300px;
+    min-height: 250px;
+    width: 50%;
+
+    @media only screen and (max-width: 700px) {
+      // background-color: pink;
+      min-height: auto;
+      padding: 20px;
+    }
+
+    @media only screen and (min-width: 700px) and (max-width: 980px) {
+      min-height: 200px;
+      padding: 20px;
+      // background-color: chartreuse;
+    }
+
+    @media only screen and (min-width: 980px) and (max-width: 1290px) {
+    }
+
+    h2 {
+      color: $orange_card_font;
+      // margin-left: auto;
+      text-align: left;
+      font-size: 46px;
+      text-transform: uppercase;
+      font-family: "Mohave";
+      font-weight: bold;
+      line-height: 1.2;
+      margin-top: 26px; // to be removed when font-family='Mohave' starts working
+      margin-bottom: 0px;
+      // width: 550px;
+      // background-color: green;
+      margin-right: auto;
+
+      @media only screen and (max-width: 700px) {
+        width: 100%;
+        font-size: 36px;
+        margin-top: 0px;
+      }
+
+      @media only screen and (min-width: 700px) and (max-width: 980px) {
+        margin-top: 0px;
+        min-width: 100%;
+      }
+
+      // @media only screen and (min-width: 980px) and (max-width: 1290px) {
+      //     margin-top: 0px;
+      // }
+    }
+
+    p {
+      // background-color: blue;
+      color: $orange_card_font;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      max-width: 550px;
+
+      @media only screen and (max-width: 700px) {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      @media only screen and (min-width: 700px) and (max-width: 980px) {
+        max-width: 600px;
+        width: 400px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+    }
+
+    &__Buttons {
+      min-height: 66px;
+      position: relative;
+      display: flex;
+      // background-color: yellow;
+      // justify-content: space-around;
+
+      @media only screen and (max-width: 500px) {
+        // display: block;
+        // min-height: 120px;
+        height: auto;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        min-width: 200px;
+        display: block;
+        position: relative;
+        margin: 0px -8px;
+
+        @media only screen and (min-width: 280px) and (max-width: 500px) {
+          width: fit-content;
+          // background-color: green;
+          height: 60px;
+        }
+
+        @media only screen and (min-width: 700px) and (max-width: 980px) {
+          min-width: 120px;
+          height: 50px;
+          margin: 0px;
+          // background-color: brown;
+        }
+      }
+
+      :hover {
+        transform: scale(1.04);
+        transition-duration: 0.2s;
+      }
+    }
+  }
+
+  &__right {
+    display: block;
+    z-index: 3;
+    // flex-grow: 1;
+    width: 20%;
+    min-width: 200px;
+    position: relative;
+    // background-color: green;
+    // it contains nextjs image with fill property so it needs to be of position relative
+    border-radius: 20px;
+
+    @media only screen and (max-width: 700px) {
+      display: none;
+    }
+
+    &__icon {
+      // background-color: aquamarine;
+      margin-left: auto;
+      display: block;
+      position: absolute;
+      width: 350px;
+      min-height: 250px;
+      height: 125%;
+      top: -68px;
+      right: -5px;
+
+      @media only screen and (min-width: 700px) and (max-width: 980px) {
+        width: 300px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        right: -14px;
+        top: -70px;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.mainContainer {
+
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    width: fit-content;
+    height: 100%;
+    // background-color: red;
+
+    &__controllerTray {
+
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px;
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__dateText {
+
+            min-width: fit-content;
+            font-size: 10px;
+            font-weight: 600;
+            color: #fd6627;
+
+        }
+    }
+
+    &__calendarContent {
+        height: 100%;
+        width: 100%;
+    }
+
+    
+}
+
+.icon {
+    cursor: pointer;
+    color: #34aa9f;
+    font-size: 10px;
+    stroke-width: 1px;
+}
+
+.left,
+.right {
+    &:hover {
+        color: #019688;
+    }
+}

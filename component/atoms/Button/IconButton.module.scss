@@ -1,0 +1,131 @@
+@import "../../../styles/variables";
+
+%btn {
+  outline: 0;
+  border: 0;
+  background: none;
+  appearance: none;
+  font-family: inherit;
+  padding: 0 25px;
+  height: 4.5rem;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  i {
+    margin-right: 1rem;
+    &::before {
+      font-weight: 400 !important;
+    }
+  }
+}
+
+.btn-icon {
+  @extend %btn;
+  // min-width: 4.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  padding: 0;
+  transition: 0.3s;
+  i {
+    margin-right: 0;
+    &::before {
+      font-weight: 300 !important;
+    }
+  }
+}
+
+.btn-icon-small {
+  @extend .btn-icon;
+  min-width: 3rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.4rem;
+}
+
+.btn-icon-medium {
+  @extend .btn-icon;
+  // min-width: 3rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.6rem;
+}
+
+.btn-icon-fade {
+  @extend .btn-icon;
+  color: $textColor;
+  &:hover {
+    background-color: rgba($color: $textColor, $alpha: 0.1);
+  }
+}
+
+.btn-icon-white {
+  @extend .btn-icon;
+  color: $textColor;
+  background-color: white;
+  box-shadow: 1px 2px 4px $shadowGrey;
+  &:hover {
+    background-color: darken($color: white, $amount: 10);
+  }
+}
+
+.btn-icon-active {
+  @extend .btn-icon;
+  color: $primaryColor;
+  background-color: white;
+  box-shadow: 1px 1px 6px #d8d8d8;
+  &:hover {
+    background-color: darken($color: white, $amount: 10);
+  }
+}
+
+.btn-icon-primary {
+  @extend .btn-icon;
+  border-color: $primaryColor;
+  background-color: $primaryColor;
+  color: white;
+  &:hover {
+    background-color: lighten($color: $primaryColor, $amount: 5);
+  }
+}
+
+.btn-icon-secondary {
+  @extend .btn-icon;
+  border-color: $secondaryColor;
+  background-color: $secondaryColor;
+  color: white;
+  &:hover {
+    background-color: lighten($color: $secondaryColor, $amount: 5);
+  }
+}
+
+.btn-icon-darkBlue {
+  @extend .btn-icon;
+  border-color: $darkBlue;
+  background-color: $darkBlue;
+  color: white;
+  &:hover {
+    background-color: lighten($color: $darkBlue, $amount: 5);
+  }
+}
+
+.btn-icon-disabled {
+  @extend .btn-icon;
+  // box-shadow: 1px 2px 4px #aaa;
+  background-color: #eee;
+  color: $darkBlue;
+  cursor: not-allowed;
+}
+
+.btn-icon-hover {
+  @extend .btn-icon;
+  &--primary {
+    &:hover svg {
+      color: $primaryColor;
+    }
+  }
+}

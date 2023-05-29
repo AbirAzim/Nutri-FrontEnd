@@ -1,0 +1,62 @@
+@import "../../../styles/partials/mixin";
+@import "../../../styles/partials/variables";
+.wikiCompareContainer {
+  max-width: $_2xl;
+  margin: 40px auto;
+  padding: 0px 16px;
+}
+
+.wikiIngredientContainer {
+  margin-top: 40px;
+}
+
+.compareIngredientContainer {
+  width: 100%;
+  transition: all 0.3s linear;
+  display: flex;
+
+  justify-content: center;
+  .firstColumn {
+    width: 25%;
+  }
+  .secondColumn {
+    width: 75%;
+  }
+
+  @media (max-width: 1280px) {
+    // grid-template-columns: 33.33% 66.66%;
+    .firstColumn {
+      width: 33.33%;
+    }
+    .secondColumn {
+      width: 66.66%;
+    }
+  }
+  @media (max-width: 1024px) {
+    // grid-template-columns: 50% 50%;
+    .firstColumn {
+      width: 50%;
+    }
+    .secondColumn {
+      width: 50%;
+    }
+  }
+  @media (max-width: 768px) {
+    // grid-template-columns: 100%;
+    flex-direction: column;
+    .firstColumn {
+      width: 100%;
+    }
+    .secondColumn {
+      width: 100%;
+    }
+  }
+}
+
+.button__bar {
+  @include sliderCustomDot;
+}
+
+.button__bar :global(li.slick-active) button {
+  background-color: $primaryColor;
+}

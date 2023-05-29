@@ -1,0 +1,43 @@
+.mainContainer {
+    border: 1px #f6f6f6 solid;
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+.innerCircle {
+    border: 1px #f6f6f6 solid;
+    aspect-ratio: 1;
+    height: 70%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    position: relative;
+
+    &__circleRingConnector {
+        position: absolute;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        list-style: none;
+        background-color: red;
+        height: 100%;
+
+        li {
+            position: absolute;
+            aspect-ratio: 1;
+            width: 35px;
+            background-color: green;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+}

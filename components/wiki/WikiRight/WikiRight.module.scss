@@ -1,0 +1,82 @@
+.right {
+  background-color: transparent;
+  transition: all 500ms ease;
+}
+
+.recipeHeadingTopSec {
+  margin-bottom: 18px;
+
+  & h3 {
+    display: flex;
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
+
+.chartbarIconDiv {
+  max-width: 22px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 8px;
+  width: 20%;
+  margin-right: 7px;
+}
+
+.rightCard {
+  background-color: white;
+  border-radius: 14px;
+  padding: 20px 16px;
+  -webkit-box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+}
+
+.rightCardNutrition {
+  background-color: white;
+  border-radius: 14px;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.rightCardHeading {
+  font-size: 20px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+}
+
+.dropDownBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  .dropDown {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .downArrowIcon {
+    color: #a6a6a6;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+.noIngredient {
+  text-align: center;
+  color: #c4c4c4;
+  font-weight: 400;
+  margin: 0 10px;
+  font-family: inherit;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 980px) {
+  .chartbarIconDiv {
+    margin-left: 0px;
+  }
+
+  .rightCard {
+    width: 100%;
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../../styles/partials/variables";
+.ingredient {
+  &__add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    margin: 2rem 1.5rem;
+    & > button {
+      padding: 1rem;
+      color: $secondaryColor !important;
+      border: 1px solid $secondaryColor;
+      transition: all 0.3s ease-in;
+      &:hover {
+        background-color: $secondaryColor !important;
+        color: $white !important;
+      }
+    }
+  }
+}
+.addToCart {
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  background-color: #fbfbfb;
+  border-radius: 8px;
+  &--top {
+    margin: 2rem 1.5rem;
+    padding: 0 1rem;
+  }
+  &--edit {
+    padding: 0 1rem !important;
+  }
+  &__form {
+    flex-grow: 1;
+    & > div > div {
+      padding-bottom: 0 !important;
+    }
+  }
+  &__buttons {
+    // width: 13rem;
+    display: flex;
+    justify-content: center;
+    // padding: 0.5rem 0 0.5rem 1rem;
+  }
+}
+
+.inputWrapper {
+  width: 100%;
+  border: 1px solid $slightGray;
+  border-radius: 10px;
+  transition: $transition;
+  &:hover,
+  &:focus {
+    border: 1px solid $secondaryColor;
+  }
+  input {
+    border-color: transparent;
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+  .icon {
+    color: $fontGray;
+    transition: $transition;
+    &:hover {
+      color: $black;
+    }
+  }
+}

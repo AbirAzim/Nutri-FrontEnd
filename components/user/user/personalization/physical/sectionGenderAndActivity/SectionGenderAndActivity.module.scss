@@ -1,0 +1,81 @@
+@mixin responsive($min_width, $max_width) {
+  @media only screen and (min-width: $min_width) and (max-width: $max_width) {
+    @content;
+  }
+}
+
+.imageContainer {
+  &__innerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+
+    &__elem {
+      flex: 1;
+    }
+  }
+}
+
+.singleImage {
+  cursor: pointer;
+  .imageBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ececec;
+    border: 1px solid #ececec;
+    background: #f8f9fa;
+    padding: 10px;
+    max-width: 195px;
+    border-radius: 10px;
+    height: 54px;
+    img {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    // @media screen and (max-width: 900px) {
+    //   width: 121px;
+    //   height: 121px;
+    //   margin: 30px auto 30px;
+    // }
+  }
+
+  p {
+    font-size: 14px;
+    color: #c4c4c4;
+    margin: 0;
+    text-align: center;
+    margin-left: 10px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+.singleImage:hover p {
+  color: #fe5d1f;
+}
+.singleImage.active p {
+  color: #fe5d1f;
+}
+
+.singleImage:hover .imageBox {
+  background-color: #fff;
+  border: 1px solid #fe5d1f;
+}
+.singleImage.active .imageBox {
+  background-color: #fff;
+  border: 1px solid #fe5d1f;
+}
+.singleImage:hover .imageBox img {
+  filter: inherit;
+  -webkit-filter: inherit;
+}
+.singleImage.active .imageBox img {
+  filter: inherit;
+  -webkit-filter: inherit;
+}

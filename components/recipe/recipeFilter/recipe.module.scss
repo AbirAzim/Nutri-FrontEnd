@@ -1,0 +1,133 @@
+@mixin responsive($min-Width, $max-width) {
+  @media screen and (min-width: $min-Width) and (max-width: $max-width) {
+    @content;
+  }
+}
+.mainDiv {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 83vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+
+  &__header {
+    min-height: 100px;
+  }
+
+  &__filterCardTray {
+    min-height: 20px;
+  }
+
+  &__results {
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+      width: 96%;
+      font-size: 16px;
+      height: 36px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .center {
+        display: flex;
+        align-self: center;
+      }
+
+      &__right {
+        width: 100px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        &__image {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+
+          div {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    &__body {
+      padding: 10px 20px;
+
+      &__ul {
+        list-style: none;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    display: flex;
+    background-color: white;
+
+    &__ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      width: 100%;
+      height: 64px;
+
+      &__div {
+        height: 100%;
+
+        &__left {
+          display: flex;
+          width: 320px;
+          justify-content: space-between;
+          margin-left: -10px;
+        }
+
+        &__right {
+          display: flex;
+          justify-content: space-between;
+          width: 320px;
+          margin-right: -10px;
+        }
+      }
+
+      &__li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+
+        &__icon {
+          padding: 10px;
+          position: relative;
+          min-width: 170px;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.noRecipe {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+  p {
+    color: #ececec;
+  }
+}

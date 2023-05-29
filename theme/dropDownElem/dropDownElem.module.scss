@@ -1,0 +1,41 @@
+%sharedStyleOptions {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.mainContainer {
+    background-color: #fbfbfb;
+    position: relative;
+    border-radius: 6px;
+
+    &__selectedFeild {
+        @extend %sharedStyleOptions;
+    }
+}
+
+.icon {
+    margin-left: auto;
+    color: #d4d4d4;
+}
+
+.optionList {
+    position: absolute;
+    width: 100%;
+    background-color: #fbfbfb;
+    margin-top: 10px;
+    border-radius: 4px;
+    z-index: 3;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    span {
+        @extend %sharedStyleOptions;
+
+        &:hover {
+            background-color: white;
+        }
+    }
+}

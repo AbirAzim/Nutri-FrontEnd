@@ -1,0 +1,45 @@
+.popup {
+  position: absolute;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow.top:before {
+  top: -10px;
+  border-color: transparent transparent white transparent;
+  border-width: 0 5px 10px 5px;
+}
+
+.arrow.bottom:before {
+  bottom: -10px;
+  border-color: white transparent transparent transparent;
+  border-width: 10px 5px 0 5px;
+}
+
+.arrow.left:before {
+  left: -10px;
+  border-color: transparent white transparent transparent;
+  border-width: 5px 10px 5px 0;
+}
+
+.arrow.right:before {
+  right: -10px;
+  border-color: transparent transparent transparent white;
+  border-width: 5px 0 5px 10px;
+}

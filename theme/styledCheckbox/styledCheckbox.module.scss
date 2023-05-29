@@ -1,0 +1,22 @@
+.mainContainer {
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    
+    &__checkbox {
+        height: 16px;
+        aspect-ratio: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        
+        &__visibleSelector{
+            height: 10px;
+            background-color: #fd5109;
+            aspect-ratio: 1;
+            display: none;
+            border-radius: 3px;
+        }
+    }
+}

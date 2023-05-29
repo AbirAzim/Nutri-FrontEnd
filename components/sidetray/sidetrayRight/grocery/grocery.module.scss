@@ -1,0 +1,71 @@
+.grocery {
+    border: 2px dashed #DEDEDE;
+    border-radius: 13px;
+    -webkit-border-radius: 18px;
+    min-height: 30px;
+}
+
+.grocery__head {
+    border-bottom: 2px dashed #DEDEDE;
+    position: relative;
+    padding: 15px 15px 15px 0;
+    margin: 0 17px 20px;
+    display: flex;
+    align-items: center;
+
+    svg{
+        transform: scale(0.75);
+    }
+
+}
+
+.grocery__head p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 15px;
+    color: #000;
+}
+
+.groceries {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.item {
+    width: calc(90% / 3);
+    margin-bottom: 6%;
+    cursor: pointer;
+}
+
+.image {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+
+    img {
+        max-width: 100%;
+        max-height: 33px;
+    }
+}
+
+.item p {
+    max-width: 100%;
+    text-align: center;
+    font-size: 11px;
+    color: #000;
+    display: block;
+    padding-top: 10px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

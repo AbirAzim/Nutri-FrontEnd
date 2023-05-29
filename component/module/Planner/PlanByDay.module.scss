@@ -1,0 +1,163 @@
+.wrapper {
+  // background-color: #fff;
+  padding: 20px 20px;
+}
+
+$sharedHeight: 60px;
+$sharedBorderRadius: 5px;
+$sharedBorderStyle: 1px #d1cece solid;
+$sharedBackgroundColor: white;
+
+%sharedFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan {
+  min-height: $sharedHeight;
+  display: flex;
+  margin: 8px 0px;
+
+  &__dateDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: $sharedHeight;
+    width: 50px;
+    height: inherit;
+    cursor: pointer;
+    &__day {
+      @extend %sharedFlex;
+      color: #9d9799;
+      font-size: 10px;
+    }
+
+    &__date {
+      @extend %sharedFlex;
+      color: #6e696b;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  &__recipeDiv {
+    @extend %sharedFlex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.recipe {
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px 10px;
+  margin: 2px 0px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(60px, 44%) minmax(60px, auto) minmax(60px, auto) minmax(
+      100px,
+      auto
+    );
+
+  &:hover {
+    .recipe__tray {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__rxScore,
+  &__calories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fd7c46;
+    font-weight: 600;
+    font-size: 10.5px;
+  }
+
+  &__containerDiv {
+    display: flex;
+    width: 100%;
+
+    &__colorIndicator {
+      height: 21px;
+      width: 4px;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  &__tray {
+    font-size: 16px;
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    color: #bcbcbc;
+
+    &__icons {
+      cursor: pointer;
+
+      &:hover {
+        color: #fd6627;
+      }
+    }
+  }
+
+  &__optionTray {
+    background-color: $sharedBackgroundColor;
+    position: absolute;
+    right: -10px;
+    top: 120%;
+    width: 120px;
+    border-radius: $sharedBorderRadius;
+    border: $sharedBorderStyle;
+    z-index: 1;
+    padding: 10px 0px;
+    display: none;
+
+    &__pointingDiv {
+      z-index: -1;
+      height: 10px;
+      aspect-ratio: 1;
+      background-color: $sharedBackgroundColor;
+      position: absolute;
+      top: -5px;
+      right: 20px;
+      transform: rotate(45deg);
+      border-radius: 2px;
+      border-left: $sharedBorderStyle;
+      border-top: $sharedBorderStyle;
+    }
+  }
+}
+
+.calender {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(238, 238, 238);
+  }
+  &__icon {
+    color: #707070;
+  }
+}

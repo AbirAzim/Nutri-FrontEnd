@@ -1,0 +1,67 @@
+.userPlanContainer {
+  width: 100%;
+  padding: 25px 20px;
+  border: 2px solid #fe5e1f00;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  .planTitle {
+    font-size: 20px;
+    color: #000 !important;
+    letter-spacing: 0;
+    display: flex;
+    line-height: 1.875rem;
+  }
+  .planSubtitle {
+    font-size: 14px;
+    color: #c4c4c4 !important;
+    letter-spacing: 0;
+    line-height: 1.3125rem;
+    font-weight: 300 !important;
+  }
+  strong {
+    font-size: 26px;
+    letter-spacing: 0;
+    line-height: 2.3125rem;
+    margin-top: 28px;
+    display: block;
+    small {
+      color: #ececec;
+      font-size: 80%;
+      font-weight: 400;
+    }
+  }
+  .btnContainer {
+    margin: 35px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      font-size: 13px;
+      font-weight: 400;
+      color: black;
+      padding: 10px 10px 10px 0;
+      margin-left: 20px;
+
+      &::before {
+        content: "\2022"; /* \2022 is css for bulllet point */
+        color: #fe5d1f;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+}
+
+.userPlanContainer.active {
+  border-color: #fe5d1f;
+  box-shadow: 0px 0px 15px #fe5d1f29;
+}

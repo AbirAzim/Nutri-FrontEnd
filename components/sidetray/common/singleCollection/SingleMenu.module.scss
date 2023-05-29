@@ -1,0 +1,118 @@
+.collection__child {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 12px;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #000;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  &:hover .leftSide .abs {
+    transform: scale(1.1);
+  }
+  &:hover .leftSide p {
+    color: #fe5d1f;
+  }
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .img {
+      position: relative;
+      width: 47px;
+      height: 47px;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .abs {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all;
+        transition-duration: 0.3s;
+      }
+    }
+    p {
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .handIcon {
+      margin-left: 10px;
+      padding-bottom: 5px;
+      color: #929292;
+      &:hover {
+        color: #fe5d1f;
+      }
+    }
+  }
+
+  .checkBox {
+    padding-right: 20px;
+  }
+
+  .rightSide {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: transparent;
+    position: relative;
+    &:hover {
+      background: #f0f0f0;
+    }
+    .moreIcon {
+      font-size: 20px;
+    }
+
+    .menu {
+      width: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: auto;
+      padding: 4px 15px;
+      max-height: 30px;
+      border: 1px solid #eeeeee;
+      border-radius: 5px;
+      background: #eeeeeef2;
+      top: 30px;
+      right: 0;
+      visibility: hidden;
+
+      .iconBox {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+
+      .icon {
+        color: #929292;
+
+        &:hover {
+          color: #fe5d1f;
+        }
+      }
+    }
+
+    .showMenu {
+      visibility: visible !important;
+    }
+  }
+}

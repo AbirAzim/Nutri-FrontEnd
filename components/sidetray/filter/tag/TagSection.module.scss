@@ -1,0 +1,71 @@
+.tagSectionContainer {
+  width: 100%;
+  .tagSectionInput {
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 10px;
+    color: #bcbcbc;
+    line-height: 36px;
+    font-size: 12px;
+    min-height: 30px;
+    margin-bottom: 16px;
+    width: 100%;
+    outline: none;
+    &:focus {
+      border: 1px solid #7dbd3b;
+    }
+    &::placeholder {
+      color: #bcbcbc;
+    }
+  }
+  .singleItem {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 16px 0;
+    cursor: pointer;
+    h5 {
+      color: #000000;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+  .singleItemInside {
+    display: flex;
+    align-items: center;
+    // border-bottom: 1px solid #dbdbdb;
+    padding: 10px 0;
+    padding-left: 10px;
+    cursor: pointer;
+    h5 {
+      color: #000000;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.accordionSummaryForRightIcon {
+  padding: 16px 0;
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  .iconRight {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .arrowIcon {
+      transition: all 0.6s;
+    }
+
+    &.active {
+      .arrowIcon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

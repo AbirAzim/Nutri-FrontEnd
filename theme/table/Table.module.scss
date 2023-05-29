@@ -1,0 +1,41 @@
+.tableContainer {
+  border: 1px solid #ececec;
+  border-top: none;
+  width: 100%;
+  border-spacing: 0;
+  position: relative;
+
+  th {
+    color: #484848 !important;
+    font-size: 15px;
+    padding: 25px 15px;
+    border: none;
+    background: #fbfbfb;
+    font-weight: 400;
+    text-align: start;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 1;
+    border-top: 1px solid #ececec;
+  }
+
+  .arrowIcon {
+    margin-left: 10px;
+    display: inline-block;
+  }
+
+  td {
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    padding: 30px 15px;
+    border: none;
+    border-bottom: 1px solid #ececec;
+  }
+  .tableBody:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
+}

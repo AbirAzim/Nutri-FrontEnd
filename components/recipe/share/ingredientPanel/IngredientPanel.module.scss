@@ -1,0 +1,18 @@
+@import "../../../../styles/partials/mixin";
+.ingrdeintpanelWraper {
+  @include media(xl) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+  }
+}
+.ingrdeintpanelContainer {
+  padding: 10px;
+  @include media(xl) {
+    -webkit-box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 14px;
+  }
+}

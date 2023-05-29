@@ -1,0 +1,231 @@
+.shared {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 160rem;
+    margin: 1.5rem auto;
+    img {
+      height: 5rem;
+    }
+  }
+  &__main {
+    max-width: 160rem;
+    margin: 2rem auto -33rem;
+    h1 {
+      font-size: 4rem;
+      color: #323232;
+      font-weight: 600;
+      margin-top: 7rem;
+    }
+    p {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #626262;
+      font-size: 3.4rem;
+      line-height: 4.2rem;
+      font-weight: 200;
+    }
+    button {
+      border: none;
+      background-color: #fe5717;
+      border-radius: 4rem;
+      color: #fefefe;
+      font-weight: 600;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 2.4rem;
+      padding: 2rem 5rem;
+      cursor: pointer;
+      margin: auto;
+      display: block;
+    }
+    h3 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    &_mockup {
+      position: relative;
+      top: 140px;
+      transform: rotate(12deg);
+      overflow: hidden;
+      width: 32rem;
+      z-index: -1;
+    }
+  }
+  &__preview {
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    background-color: rgb(255 255 255 / 49%);
+    display: inline-block;
+    padding: 3rem;
+    border-radius: 50%;
+    img {
+      border-radius: 50%;
+    }
+  }
+  &__footer {
+    position: relative;
+    width: 100%;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f9e2d9;
+    &_bg {
+      background-color: #f9e2d9;
+      height: 15rem;
+    }
+    &_social {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+      p {
+        text-align: center;
+        margin-top: 2rem;
+      }
+    }
+    & > img {
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.invited {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 160rem;
+    margin: 1.5rem auto;
+    img {
+      height: 5rem;
+    }
+  }
+  &__main {
+    max-width: 160rem;
+    margin: 2rem auto -42rem;
+    h1 {
+      font-size: 4rem;
+      color: #323232;
+      font-weight: 600;
+      margin-top: 7rem;
+    }
+    p {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      color: #626262;
+      font-size: 3.4rem;
+      line-height: 4.2rem;
+      font-weight: 200;
+      width: 90%;
+      span {
+        color: #fd5109;
+        font-weight: 400;
+      }
+    }
+    button {
+      border: none;
+      background-color: #fe5717;
+      border-radius: 4rem;
+      color: #fefefe;
+      font-weight: 600;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 2.4rem;
+      padding: 2rem 5rem;
+      cursor: pointer;
+      margin: auto;
+      display: block;
+    }
+    h3 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    &_mockup {
+      position: relative;
+      top: -40px;
+      left: 30px;
+      transform: rotate(20deg);
+      overflow: hidden;
+      width: 28rem;
+      z-index: -1;
+    }
+    &_ing {
+      position: relative;
+      top: 180px;
+      left: -170px;
+      overflow: hidden;
+      width: 32rem;
+      z-index: 1;
+    }
+    &_leader {
+      position: relative;
+      top: -180px;
+      left: -100px;
+      overflow: hidden;
+      width: 48rem;
+      z-index: 1;
+    }
+  }
+  &__info {
+    width: 60rem;
+    height: 55rem;
+    position: relative;
+    z-index: 1000;
+    background-color: rgb(255 255 255 / 49%);
+    display: inline-block;
+    padding: 3rem;
+    font-family: "Segoe UI", sans-serif;
+
+    div {
+      background-color: white;
+      padding: 3rem;
+    }
+    ul {
+      list-style: disc;
+      margin-left: 2rem;
+    }
+    li {
+      margin-bottom: 1.5rem;
+      color: #989898;
+      font-size: 18px;
+      line-height: 2.2rem;
+    }
+    h2 {
+      font-size: 3.6rem;
+      color: #fd5109;
+      font-weight: 500;
+      margin-bottom: 4rem;
+      span {
+        color: #7cbc39;
+      }
+    }
+  }
+  &__footer {
+    position: relative;
+    width: 100%;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #ecf2e5;
+    &_bg {
+      background-color: #ecf2e5;
+      height: 15rem;
+    }
+    &_social {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+      p {
+        text-align: center;
+        margin-top: 2rem;
+      }
+    }
+    & > img {
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+}

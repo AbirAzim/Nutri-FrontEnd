@@ -1,0 +1,443 @@
+//font-size: unquote("min(max(#{$fluid-min}rem, #{$fluid-scaler}), #{$level-size})");
+.centerMain {
+  background-color: transparent;
+  transition: all 500ms ease;
+}
+
+.imageSliderContainer {
+  width: 100%;
+  min-height: 220px;
+  position: relative;
+  aspect-ratio: 2.5;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &:hover .imageCaption {
+    transform: translateY(0%);
+  }
+
+  .bgBlurImage {
+    /* Add the blur effect */
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+
+    /* Full height */
+    height: 100%;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .imageBox {
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    inset: 0px;
+
+    .img {
+      position: absolute;
+      inset: 0px;
+      box-sizing: border-box;
+      padding: 0px;
+      border: none;
+      margin: auto;
+      display: block;
+      width: 0px;
+      height: 0px;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      object-fit: contain;
+
+      // border-radius: 15px;
+    }
+
+    // @media (max-width: 768px) {
+    //   aspect-ratio: 2/1;
+    // }
+  }
+  .imageCaption {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    transition: transform 0.3s;
+    position: absolute;
+    inset: 0;
+    transform: translateY(100%);
+    padding: 16px;
+    .captionText {
+      color: white;
+      font-size: 14px;
+      font-style: italic;
+      cursor: pointer;
+    }
+  }
+}
+.playButton {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyContainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 14px;
+  -webkit-box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+}
+
+.subHeadingIconBoxRight {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    margin-right: 10px;
+    .innerIcon {
+      margin-right: 5px;
+      color: #c4c4c4;
+      transition: all 0.3s;
+    }
+    .innerText {
+      font-size: 14px;
+      color: #ababab;
+    }
+  }
+}
+
+.rotatedIcon180Deg {
+  transform: rotate(180deg);
+}
+
+.commentsIconBox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+  .countComments {
+    margin-left: 3px;
+    color: #ababab;
+    font-size: 14px;
+  }
+}
+
+.activeIcon {
+  color: #7cbc39 !important;
+}
+.inActiveIcon {
+  color: #c4c4c4;
+}
+
+.iconPdInner {
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-right: 10px;
+  margin-left: 10px;
+
+  & div {
+    height: auto;
+    width: 22px;
+  }
+}
+
+.cancleBtn {
+  color: #7cbc39;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 14px;
+  -webkit-box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  margin-bottom: 20px;
+}
+
+.ingredientInfoContainer {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.blendingRecipeHeading h3 {
+  font-size: 28px;
+  color: #000;
+  font-weight: bold;
+}
+
+.blendingRecipeTopOptions {
+  margin-top: 21px;
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blendingTopLeft {
+  display: flex;
+  align-items: center;
+}
+
+.tagItemBx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  color: #c4c4c4;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.authorBx {
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1.2rem;
+  padding: 0px;
+  display: flex;
+  vertical-align: middle;
+}
+
+.dotDiv {
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  & .dot {
+    color: #dcdbdb;
+    transform: scale(0.58);
+    font-size: 20px;
+    margin: 3px !important;
+    vertical-align: middle;
+  }
+}
+
+.authName {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #000;
+  font-size: 14px;
+}
+
+.bookmarkBtn {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 6px;
+  margin-right: 4px;
+}
+
+.shareIcon {
+  display: block;
+  margin: 0;
+  padding: 1px;
+  height: 100%;
+  width: 17px;
+}
+
+.blshare {
+  font-size: 14px;
+  color: #000000;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.commentBtn {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.commentIcon {
+  width: 17px;
+  margin-right: 10px;
+  // height: 100%;
+}
+
+.countComment {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ababab;
+}
+
+.content {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+}
+
+.carouselDiv {
+  height: 100vh;
+}
+
+.healthRiskRankScore {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 6px;
+  font-weight: 400;
+  font-size: 28px;
+  color: rgb(253, 114, 0);
+
+  width: fit-content;
+}
+
+.healthRiskRankTitle {
+  margin: 6px;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: 300;
+  font-size: medium;
+  color: rgb(99, 99, 99);
+  width: fit-content;
+}
+
+.text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ababab;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.read_or_hide {
+  font-weight: 600;
+  font-size: medium;
+  cursor: pointer;
+  color: black;
+}
+
+.textContentDiv {
+  width: auto;
+  height: auto;
+}
+
+.contentSection {
+  background-color: white;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.contentTitle {
+  width: fit-content;
+
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.imgdiv {
+  height: 100%;
+  width: 30px;
+  margin-right: 10px;
+  max-width: 22px;
+}
+
+@media screen and (max-width: 980px) {
+  .recipeHeadingTopSection {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    & h3 {
+      width: 100%;
+      display: flex;
+      font-size: 18px;
+      color: #000000;
+      margin: 0;
+      align-items: center;
+      font-weight: 400;
+    }
+  }
+
+  .healthRiskRankScore {
+    font-size: 24px;
+  }
+
+  .contentSection {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 16px;
+    padding: 0px 12px 2px 12px;
+  }
+
+  .contentTitle {
+    padding-top: 10px;
+  }
+
+  .carouselDiv {
+    width: 100%;
+    background-color: #7cbc39;
+  }
+}
+
+.variantContainer {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .variantItem {
+    color: #ababab;
+    border: 1px solid #c4c4c4;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 16px;
+    font-size: 14px;
+  }
+  .activeVariant {
+    color: #7cbc39;
+    border: 1px solid #7cbc39;
+  }
+}
+
+.wikiDescriptionBox {
+  padding-top: 10px;
+  .textDis {
+    font-size: 16px;
+    color: #484848;
+    line-height: 24px;
+  }
+}

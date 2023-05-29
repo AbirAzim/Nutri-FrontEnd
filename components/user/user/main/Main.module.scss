@@ -1,0 +1,30 @@
+.mainContainer {
+  padding: 20px 20px 40px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+  justify-content: space-between;
+  border-bottom: 2px solid #dcdbdb;
+
+  .text {
+    border-bottom: 2px solid transparent;
+    color: #dcdbdb;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 8px 16px;
+    margin-bottom: -2px;
+    cursor: pointer;
+    @media screen and (max-width: 1200px) {
+      padding: 0px 8px;
+      font-size: 18px;
+    }
+  }
+  .text.active {
+    border-bottom: 2px solid #fe5d1f;
+    color: #fe5d1f;
+  }
+}

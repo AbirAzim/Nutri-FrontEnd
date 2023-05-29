@@ -1,0 +1,103 @@
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 100%;
+
+  .buttonContainer {
+    margin-top: 20px;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  padding-left: 30px;
+}
+
+.filterIconContainer {
+  border-right: 2px solid #ececec;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  .filterIcon {
+    font-size: 20px;
+    color: #495057;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: #fe5d1f;
+    }
+  }
+  .filterIcon.active {
+    color: #fe5d1f;
+  }
+  .filterIconNotVisible {
+    visibility: hidden;
+  }
+  .filterIconVisible {
+    visibility: visible;
+  }
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  border-bottom: 2px solid #ececec;
+
+  .seachIcon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #495057;
+  }
+  input {
+    width: 100%;
+    min-width: 500px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    color: #495057;
+
+    @media (max-width: "768px") {
+      min-width: 400px;
+    }
+    @media (max-width: "640px") {
+      min-width: 250px;
+    }
+  }
+
+  .mic {
+    margin-left: 10px;
+    font-size: 22px;
+    color: #495057;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: #fe5d1f;
+    }
+  }
+  .mic.active {
+    color: #fe5d1f;
+  }
+  .seachIconActive {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #fe5d1f;
+    cursor: pointer;
+  }
+  .waveIcon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #495057;
+  }
+}
+
+.activeColor {
+  color: #fe5d1f;
+}

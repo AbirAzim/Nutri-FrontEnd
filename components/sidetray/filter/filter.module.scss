@@ -1,0 +1,140 @@
+.filter__top {
+  // border: 2px dashed #dedede;
+  border-radius: 18px;
+  // padding: 10px;
+  margin-top: 10px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 4px solid #fe5d1f;
+    padding-left: 15px;
+    .title {
+      width: 100%;
+      font-size: 16px;
+      border-bottom: 2px dashed #dedede;
+      position: relative;
+      font-weight: 600;
+      padding-bottom: 8px;
+    }
+
+    .icon {
+      color: #fe5d1f;
+      padding-bottom: 8px;
+      cursor: pointer;
+      border-bottom: 2px dashed #dedede;
+    }
+  }
+
+  // h3 {
+  //   font-size: 16px;
+  //   padding-left: 15px;
+  //   position: relative;
+  //   font-weight: 500;
+
+  //   &::after {
+  //     content: "";
+  //     width: 6px;
+  //     height: 80%;
+  //     background: #fe5d1f;
+  //     position: absolute;
+  //     top: 50%;
+  //     transform: translateY(-50%);
+  //     left: 0;
+  //     width: 4px;
+  //   }
+
+  //   &::before {
+  //     content: "";
+  //     width: 100%;
+  //     position: absolute;
+  //     border-bottom: 2px dashed #dedede;
+  //     left: 0;
+  //     bottom: -15px;
+  //   }
+  // }
+}
+
+.ingredientContainer {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding-right: 5px;
+
+  .item {
+    cursor: pointer;
+    position: relative;
+
+    .image {
+      width: 100%;
+      height: 65px;
+      border: 1px solid #e5e5e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+
+      img {
+        width: 70%;
+        height: 60%;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+    }
+
+    p {
+      padding-top: 2px;
+      font-size: 10px;
+      text-align: center;
+      width: 80px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.noResult {
+  color: #bcbcbc;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.filter__bottom {
+  margin-top: 5px;
+}
+
+.dropdown {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tick {
+  position: absolute;
+  right: 2px;
+  overflow: hidden;
+  top: 0px;
+  width: fit-content;
+}
+
+.ticked {
+  border-radius: 50%;
+  width: 100%;
+  transform: scale(0.7);
+  aspect-ratio: 1;
+  color: #f95d2b;
+}
+
+.rankgingItemContainer {
+  max-height: 350px;
+  overflow-x: hidden;
+  padding-right: 5px;
+}

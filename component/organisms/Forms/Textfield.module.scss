@@ -1,0 +1,145 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.form-control {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 10px;
+  color: #bcbcbc;
+  line-height: 36px;
+  font-size: 14px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  min-height: 4.1rem;
+  &:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #7cbc39;
+    outline: 0;
+    box-shadow: none;
+  }
+  &::placeholder {
+    font-size: 14px;
+    color: #bcbcbc;
+  }
+}
+
+.field {
+  width: 100%;
+  label {
+    margin-bottom: 1rem;
+    display: block;
+
+    &.required:after {
+      content: "*";
+      color: $red;
+      margin-left: 0.3rem;
+    }
+  }
+  & + .field {
+    margin-top: 2rem;
+  }
+  &_endAdorment {
+    position: relative;
+
+    .custom-input {
+      padding-right: 4rem;
+    }
+    .custom-input + * {
+      position: absolute;
+      right: 15px;
+      bottom: 50%;
+    }
+  }
+  &_startAdornment {
+    position: relative;
+
+    .custom-input {
+      padding-left: 4rem;
+    }
+    .custom-input + * {
+      position: absolute;
+      left: 15px;
+      bottom: 50%;
+    }
+  }
+
+  &_endAdorment--password {
+    position: relative;
+
+    .custom-input {
+      padding-right: 4rem;
+    }
+    & button {
+      position: absolute;
+      right: 7px;
+      bottom: 20px;
+    }
+  }
+  &__endAdorment--unit {
+    position: relative;
+    > button {
+      @include buttonReset();
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4.5rem;
+      height: 4.5rem;
+      background-color: $shadowGrey;
+      border-radius: 0.8rem 0 0 0.8rem;
+    }
+    .custom-input {
+      padding-left: 5.5rem;
+    }
+  }
+}
+
+.custom-input {
+  border: 1px solid $darkGrey;
+  box-shadow: 1px 2px 4px $shadowGrey;
+  padding: 1rem;
+  font-size: 16px;
+  border-radius: 0.8rem;
+  height: 4.5rem;
+  transition: 0.3s;
+  // font-family: $font;
+  outline: 0;
+  width: 100%;
+  min-width: 12rem;
+  background-color: white;
+  &::placeholder {
+    color: rgba($color: $lightTextColor, $alpha: 0.7);
+  }
+  &:disabled {
+    background-color: rgb(233, 233, 233);
+    cursor: not-allowed;
+  }
+  &[readonly] {
+    pointer-events: none;
+    background-color: $darkGrey;
+    border: 0;
+  }
+  &:focus {
+    border-color: $primaryColor;
+  }
+}
+
+.field-with-unit {
+  position: relative;
+
+  .field-with-unit__unit {
+    position: absolute;
+    right: 1rem;
+    top: 1.4rem;
+    font-size: 1.4rem;
+    opacity: 0.7;
+  }
+
+  .custom-input {
+    padding-right: 4rem;
+  }
+}

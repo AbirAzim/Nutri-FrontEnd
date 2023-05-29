@@ -1,0 +1,20 @@
+.notificationBell {
+  position: relative;
+  margin-left: 2rem;
+  cursor: pointer;
+  color: #7dbd3b;
+  font-size: 2rem;
+
+  .count {
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0.8rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: #7dbd3b;
+    color: white;
+    font-size: 1rem;
+  }
+}

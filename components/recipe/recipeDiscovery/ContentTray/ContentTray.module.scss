@@ -1,0 +1,56 @@
+@import "../../../../styles/partials/variables";
+.main__slider {
+  margin-bottom: 40px;
+  &__tabmenu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media only screen and (max-width: 980px) {
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px 10px 10px;
+
+    .leftSide {
+      display: flex;
+      align-items: center;
+      .title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 1.2;
+        color: $primaryColor;
+        margin-left: 10px;
+
+        @media only screen and (max-width: 500px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .rightSide {
+      font-size: 14px;
+      border-bottom: 1px solid transparent;
+      color: $secondaryColor;
+      cursor: pointer;
+      padding: 4px;
+      transition: all 0.3s ease 0s;
+      text-decoration: none !important;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-position: left;
+
+      &:hover {
+        background-position: right;
+        color: $primaryColor;
+        border-bottom: 1px solid $primaryColor;
+      }
+    }
+  }
+}

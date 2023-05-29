@@ -1,0 +1,33 @@
+.titleContainer{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #bede9d;
+    &__greenIconBox {
+        border-radius: 6px;
+        display: inline-block;
+        width: 41px;
+        height: 41px;
+        line-height: 41px;
+        text-align: center;
+        position: relative;
+        margin-right: 15px;
+        border: 1px solid #8AC34F;
+    }
+    h5{
+        color: #000000;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+    }
+    img{
+        max-width: 15px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+    }
+}

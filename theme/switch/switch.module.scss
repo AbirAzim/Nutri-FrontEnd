@@ -1,0 +1,47 @@
+.main__top__menu {
+    display: flex;
+    flex-flow: nowrap;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border: 1px solid #DFDFDF !important;
+    border-radius: 18px;
+    height: 37px;
+    position: relative;
+}
+
+.main__top__menu__child {
+    width: 50%;
+    border: 1px solid #929292;
+    border-radius: 18px;
+    height: 35px;
+    font-size: 14px;
+    color: #929292;
+    padding: 0;
+    line-height: 35px;
+    text-align: center;
+    display: block;
+    border: 0 !important;
+    position: relative;
+    cursor: pointer;
+}
+
+.active {
+    border: 2px solid #7dbd3b !important;
+    width: 50%;
+    height: 36px;
+    position: absolute;
+    top: -1.1%;
+    bottom: 0;
+    content: "";
+    left: 0px;
+    border-radius: 18px;
+    z-index: 99999;
+    transition: all;
+    transition-duration: .4s;
+}
+.active__menu{
+    color: #7dbd3b !important;
+    transition: all;
+    transition-duration: .4s;
+}

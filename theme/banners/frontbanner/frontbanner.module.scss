@@ -1,0 +1,120 @@
+.mainDiv {
+    position: relative;
+    min-height: 320px;
+    width: calc(100% - 130px);
+    margin: auto;
+
+
+    @media only screen and (min-width: 0px) and (max-width:780px) {
+        min-height: 320px;
+        width: calc(100% - 40px);
+    }
+
+    @media only screen and (min-width: 780px) and (max-width:980px) {
+        min-height: 380px;
+        width: calc(100% - 40px);
+    }
+
+    @media only screen and (min-width: 980px) and (max-width:1030px) {
+        width: calc(100% - 30px);
+        min-height: 195px;
+    }
+
+    @media only screen and (min-width: 1030px) {
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.contentCard {
+    max-width: 58.33333%;
+    min-height: inherit;
+    position: relative;
+    top: -20px;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 0px) and (max-width:780px) {
+        max-width: 100%;
+        min-height: 230px;
+    }
+
+    @media only screen and (min-width: 780px) and (max-width:980px) {
+        min-height: 280px;
+        // background-color: red;
+    }
+
+    @media only screen and (min-width: 980px) and (max-width:1180px) {
+        min-height: 390px;
+        top: 55px;
+    }
+
+    @media only screen and (min-width: 1180px) {
+        margin-top: auto;
+        min-height: 390px;
+    }
+
+    h2 {
+        font-size: 40px;
+        letter-spacing: 2.5px;
+
+        @media only screen and (min-width:0px) and (max-width:980px) {
+            font-size: 22px;
+        }
+
+        @media only screen and (min-width:980px) and (max-width:1030px) {
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        @media only screen and (min-width: 1030px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    p {
+        color: #4D4D4D;
+        letter-spacing: 1.04px;
+        line-height: 1.8;
+
+
+
+        @media only screen and (min-width: 0px) and (max-width:980px) {
+            font-size: 12px;
+        }
+
+        @media only screen and (min-width: 980px) and (max-width:1030px) {
+            font-size: 12px;
+            margin-bottom: 24px;
+        }
+
+        @media only screen and (min-width: 1030px) {
+            margin-bottom: 26px;
+        }
+    }
+
+    @mixin buttonSmall {
+        width: 170px;
+        height: 50px;
+
+        button {
+            font-size: 16px;
+        }
+    }
+
+    div {
+        width: 215px;
+        height: 58px;
+        margin-bottom: 40px;
+
+        @media only screen and (min-width: 0px) and (max-width:980px) {
+            @include buttonSmall();
+            margin: auto auto 0px auto;
+        }
+
+        @media only screen and (min-width: 980px) and (max-width:1030px) {
+            @include buttonSmall()
+        }
+    }
+}

@@ -1,0 +1,47 @@
+
+// css breakpoint varaible for login,signup , forgot password page
+@use "./breakpoints.module.scss" as bp;
+
+
+
+.mainScreen {
+
+    // position: relative;
+    display: block;
+    height: auto;
+    min-height: 100vh;
+    max-width: 100vw;
+    // background-color: rgb(43, 95, 95);
+
+}
+
+
+.mainDiv {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    // max-height:95vh;
+    min-height:95vh;
+    // background-color: rgb(255, 47, 47);
+}
+
+
+@media screen and (max-width:bp.$breakPoint10) {
+    .mainScreen {
+        position: relative;
+        height: 100%;
+    }
+
+    .mainDiv {
+        display: block;
+        width: 100%;
+        height: 100%;
+        // background-color: yellow;
+    }
+
+    .mainDivSignup{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

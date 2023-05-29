@@ -1,0 +1,15 @@
+export const categories = [
+  { title: 'All', val: 'All' },
+  { title: 'Leafy', val: 'Leafy' },
+  { title: 'Berry', val: 'Berry' },
+  { title: 'Herbal', val: 'Herbal' },
+  { title: 'Fruity', val: 'Fruity' },
+  { title: 'Balancer', val: 'Balancer' },
+  { title: 'Fatty', val: 'Fatty' },
+  { title: 'Seasoning', val: 'Seasoning' },
+  { title: 'Flavor', val: 'Flavor' },
+  { title: 'Rooty', val: 'Rooty' },
+  { title: 'Flowering', val: 'Flowering' },
+  { title: 'Liquid', val: 'Liquid' },
+  { title: 'Tube-Squash', val: 'Tube-Squash' },
+];

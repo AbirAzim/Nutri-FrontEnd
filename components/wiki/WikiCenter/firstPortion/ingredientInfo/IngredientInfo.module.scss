@@ -1,0 +1,23 @@
+@import "../../../../../styles//partials/variables";
+.ingredientInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .amount {
+    padding: 10px 0;
+    color: $primaryColor;
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 14px;
+    color: $fontDeepGray;
+  }
+}
+
+.borderRight {
+  border-right: 1px solid $slightGray;
+}

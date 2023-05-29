@@ -1,0 +1,17 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 0 2rem;
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    color: #fe5d1f;
+  }
+  &__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 1rem;
+    color: #fe5d1f;
+  }
+}

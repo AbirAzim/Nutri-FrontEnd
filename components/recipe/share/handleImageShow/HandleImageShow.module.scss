@@ -1,0 +1,61 @@
+$element_space: 5px;
+$file_upload_width_height: 100px;
+
+@mixin imageAdd {
+  cursor: pointer;
+  margin: $element_space;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #e2dfdfe7;
+  border-radius: 12px;
+  width: $file_upload_width_height;
+  height: $file_upload_width_height;
+}
+
+.imageShowContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  .image__div {
+    position: relative;
+    overflow: hidden;
+    margin: $element_space;
+    border-radius: 12px;
+    width: $file_upload_width_height;
+    height: $file_upload_width_height;
+
+    &:hover .icon {
+      display: block;
+    }
+
+    .icon {
+      position: relative;
+      display: none;
+    }
+  }
+}
+
+.addImage {
+  min-height: 66px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $element_space;
+
+  &__secondDiv {
+    @include imageAdd();
+    transition: border 0.3s;
+    &:hover {
+      border: 2px dashed #fe5d1f;
+    }
+
+    & svg {
+      cursor: pointer;
+      font-size: 35px;
+      color: #e2dfdfe7;
+      transform: scale(1.2);
+    }
+  }
+}

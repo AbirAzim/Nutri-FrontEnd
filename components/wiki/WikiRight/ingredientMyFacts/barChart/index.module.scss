@@ -1,0 +1,44 @@
+.barChartContainer {
+  padding: 20px 16px;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  border-radius: 14px;
+  transition: all 0.2s;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+}
+.noIngredient {
+  text-align: center;
+  color: #c4c4c4;
+  font-weight: 400;
+  margin: 0 10px;
+  font-family: inherit;
+  margin-top: 2rem;
+}
+
+.title {
+  color: #8b8a8a;
+  font-weight: 500;
+  padding-bottom: 16px;
+}
+
+.subTitle {
+  font-weight: 500;
+}
+
+.dropDownBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .dropDown {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .downArrowIcon {
+    color: #a6a6a6;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}

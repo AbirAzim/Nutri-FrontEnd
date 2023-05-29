@@ -1,0 +1,22 @@
+.sectionContainer {
+  margin-bottom: 40px;
+
+  .content {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+  }
+  .contentCompare {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .contentFormulate {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../../styles/partials/variables";
+@import "../../../../styles/partials/mixin";
+.myCollectionsContainer {
+  // display: flex;
+  // flex-direction: column;
+  min-height: 90vh;
+  width: 100%;
+  max-width: $_3xl;
+  margin: 20px auto;
+  padding: 0 10px;
+  position: relative;
+  transition: $transition;
+
+  @include media(lg) {
+    padding: 0 16px;
+  }
+}
+
+.contentContainer {
+  margin: 30px 0px;
+  min-height: 100%;
+
+  @include media(lg) {
+    margin: 30px 20px;
+  }
+}

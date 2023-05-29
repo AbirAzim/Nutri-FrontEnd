@@ -1,0 +1,67 @@
+.settings {
+  padding: 1rem 2rem 4rem;
+  width: 95%;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 9px;
+  overflow: auto;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 3rem 0 4rem;
+    display: flex;
+    align-items: center;
+  }
+}
+.textarea {
+  textarea {
+    min-height: 20rem !important;
+  }
+}
+
+.challenge {
+  &__name {
+    color: #fe5d1f;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0 15px;
+    line-height: 3.9rem;
+  }
+  &__action {
+    display: flex;
+    align-items: center;
+    &__radio {
+      transform: translate(1rem, 0.7rem);
+    }
+    &__trash {
+      transition: opacity 0.2s ease-out;
+      &:disabled {
+        cursor: default;
+        &:hover {
+          background-color: transparent !important;
+        }
+        svg {
+          color: #7d7d7d;
+        }
+      }
+      svg {
+        color: #fe5d1f;
+      }
+      // transform: translate(2rem, 5px);
+      // opacity: 0;
+    }
+  }
+  // &:hover &__action__trash {
+  //   opacity: 1;
+  // }
+}

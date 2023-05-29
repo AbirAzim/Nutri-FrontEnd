@@ -1,0 +1,45 @@
+.theme__child{
+    padding: 40px 30px;
+    margin: 5px;
+    padding-bottom: 30px;
+    background-color: aliceblue;
+    box-shadow: rgba(23, 24, 24, 0.05) 0px 0px 5px 0px, rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+}
+.theme__box h3{
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.toggler{
+    background-color: #FE5D1F;
+    padding: 20px;
+    border-radius: 5px;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.cards .card{
+    width: calc(25% - 15px);
+}
+.data__cards{
+    display: flex;
+    justify-content: space-between;
+}
+.data__card{
+    width: 32%;
+}
+.cardsFive{
+    display: flex;
+    justify-content: space-between;
+}
+.card__five{
+    width: 18%;
+}
+.button__container{
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.container{
+    margin-right: 20px;
+}

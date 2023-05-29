@@ -1,0 +1,74 @@
+.searchtab {
+  width: 100%;
+  background-color: #e0e0e05a;
+  height: auto;
+  margin-top: 25px;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+
+  .item {
+    height: calc(100% - 20px);
+    background-color: #fff;
+    display: flex;
+    border-radius: 20px;
+    padding: 4px 7px;
+    font-size: 13px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+    cursor: pointer;
+    margin: 10px;
+
+    .image {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 90%;
+        max-height: 75%;
+      }
+    }
+
+    p {
+      margin-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .activeItemPrimary {
+    border: 1px solid #fe5d1f;
+  }
+}
+
+.cross {
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+  width: 18px;
+  height: 18px;
+
+  .cancel {
+    color: rgba(128, 128, 128, 0.53);
+    transform: scale(0.8);
+    // height: 100%;
+    // width: 100%;
+
+    &:hover {
+      color: #fe5d1f;
+    }
+  }
+}
+
+.item:hover .cross {
+  display: block;
+}

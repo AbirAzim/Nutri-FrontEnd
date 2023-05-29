@@ -1,0 +1,176 @@
+$footer__height:250px;
+$footer__height__bottom:42px;
+
+@mixin responsive($min_width, $max_width) {
+    @media only screen and (min-width: $min_width) and (max-width: $max_width) {
+        @content;
+    }
+}
+
+.footer {
+    min-height: $footer__height;
+    display: flex;
+    flex-direction: column;
+
+    &__download {
+        min-height: calc($footer__height - $footer__height__bottom);
+        display: flex;
+        margin: 0 45px;
+
+        @include responsive(0px, 840px) {
+            display: block;
+            margin: 0px;
+        }
+
+
+        &__left {
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &__logo {
+                padding-left: 15px;
+                margin-bottom: 25px;
+
+                @include responsive(0px, 840px) {
+                    display: block;
+                    margin: auto;
+                }
+            }
+
+            &__socialtray {
+
+                ul {
+                    width: 200px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    list-style-type: none;
+
+                    @include responsive(0px, 840px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &__center {
+            width: 33.33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+
+            @include responsive(0px, 840px) {
+                width: 100%;
+            }
+
+            &__card {
+
+                & h2 {
+                    margin-bottom: 30px;
+                    font-size: 20px;
+                }
+
+                margin-top: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 140px;
+                min-width: 90%;
+
+                @include responsive(0px, 976px) {
+                    min-height: 150px;
+                }
+            }
+
+            &__buttons {
+                width: 100%;
+                display: flex;
+                // justify-content: space-between;
+                position: relative;
+                margin-bottom: 30px;
+
+                @include responsive(0px, 840px) {
+                    display: block;
+                }
+
+                @include responsive(840px, 976px) {
+                    margin-bottom: 50px;
+                }
+
+                &__left {
+                    display: block;
+                    width: 50%;
+
+                    @include responsive(0px, 840px) {
+                        margin: 0 auto;
+                        width: fit-content;
+                    }
+
+                    @include responsive(840px, 976px) {
+                        max-width: 190px;
+                    }
+                }
+
+                &__right {
+                    display: block;
+                    width: 50%;
+
+                    @include responsive(0px, 840px) {
+                        margin: 0;
+                        margin: 0 auto;
+                        width: fit-content;
+
+                    }
+
+                    @include responsive(840px, 976px) {
+                        max-width: 190px;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+
+        &__right {
+            // width: 33.33%;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & ul {
+                list-style-type: none;
+                padding: 0px 15px;
+
+                & li {
+                    text-align: right;
+                    padding-right: 20px;
+                    font-size: 14px;
+                    letter-spacing: 0.56px;
+                    padding: 3px 0px;
+
+                    @include responsive(0px, 840px) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        background-color: #e2e2e0;
+        height: #{$footer__height__bottom};
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & p {
+            letter-spacing: 0.56px;
+            font-size: 14px;
+        }
+    }
+}

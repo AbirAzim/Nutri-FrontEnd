@@ -1,0 +1,62 @@
+.nutrition__top{
+    border: 2px dashed #DEDEDE;
+    border-radius: 18px;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+
+    h3{
+        font-size: 15px;
+        padding-left: 15px;
+        position: relative;
+        font-weight: 500;
+        &::after {
+            content: "";
+            width: 6px;
+            height: 80%;
+            background: #FE5D1F;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 4px;
+        }
+        &::before{
+            content: "";
+            width: 100%;
+            position: absolute;
+            border-bottom: 2px dashed #DEDEDE;
+            left: 0;
+            bottom: -15px;
+        }
+    }
+}
+
+.nutrition__menu{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+
+    &__item{
+        width: 30%;
+
+        &__image{
+            border: 1px solid #E5E5E5;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            margin-bottom: 4px;
+
+            img{
+                max-width: 70%;
+            }
+        }
+        p{
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+}

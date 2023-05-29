@@ -1,0 +1,9 @@
+.skeletonIngredients_wraper {
+  margin-top: 10px;
+  .category_wraper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 10px;
+  }
+}

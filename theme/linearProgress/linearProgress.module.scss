@@ -1,0 +1,82 @@
+$sharedFontWeight:500;
+$sharedFontSize:14px;
+
+@mixin tickIcon($image) {
+  background-image: url($image);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@mixin checkboxstyle($image) {
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-clip: content-box;
+    border: 1.5px solid #bbbbbb;
+    border-radius: 3px;
+    margin-right: 6px;
+    position: relative;
+
+    &:checked {
+      background-color: #fe7642;
+      @include tickIcon($image);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #e9ecef;
+    }
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+}
+
+.mainDiv {
+  width: 100%;
+  margin-left: auto;
+  margin-top: 25px;
+  margin-bottom: 28px;
+}
+
+.cardHeadComponent {
+  display: flex;
+  position: relative;
+
+  .container {
+    @include checkboxstyle("/icons/Group446.svg");
+    transform: translateY(-5%);
+  }
+}
+
+.title {
+  font-size: $sharedFontSize;
+  font-weight: $sharedFontWeight;
+  color: #000;
+  line-height: 1.3;
+  transition: color 0.3s linear;
+  width: fit-content;
+  max-width: 70%;
+  word-wrap: break-word;
+  margin-bottom: 6px;
+  cursor: pointer;
+  &:hover {
+    color: #fe5d1f;
+    font-weight: $sharedFontWeight;
+  }
+}
+
+.score {
+  margin-left: auto;
+  font-size: $sharedFontSize;
+  font-weight: $sharedFontWeight;
+  color: #000;
+  width: fit-content;
+  min-width: 35px;
+}

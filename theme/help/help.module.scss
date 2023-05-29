@@ -1,0 +1,93 @@
+@use "./breakpoints.module.scss"as bp;
+
+.mainDiv {
+    min-height: 100%;
+    position: relative;
+    transition: all 500ms ease;
+}
+
+.contentCard {
+    display: flex;
+    position: absolute;
+    min-height: 400px;
+    min-width: 200px;
+    height: auto;
+    width: 90%;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 500ms ease;
+
+    @media only screen and (max-width:bp.$breakPoint11) {
+        left: 0%;
+        top: 25px;
+        transform: none;
+        width: 100%;
+        display: block;
+    }
+
+    @media only screen and (min-width:bp.$breakPoint11) and (max-width:bp.$breakPoint12){
+        left: 0%;
+        top: 40px;
+        width: 100%;
+        transform: none;
+
+    }
+
+
+    // @media only screen and (max-width:1980px) {
+    //     left: 0%;
+    //     transform: none;
+    //     width: 100%;
+    // }
+}
+
+
+.leftDiv {
+    box-sizing: border-box;
+    background-color: transparent;
+    min-height: 50%;
+    width: 68%;
+    height: 100%;
+    padding: 0px 20px;
+
+    @media only screen and (max-width:bp.$breakPoint11) {
+        width: 100%;
+        display: block;
+    }
+
+    @media only screen and (min-width:bp.$breakPoint11) {
+        width: 68%;
+        display: block;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 600;
+        // background-color: aqua;
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
+        font-family: inherit;
+    }
+}
+
+.rightDiv {
+    box-sizing: border-box;
+    // background-color: rgb(197, 150, 63);
+    min-height: 100%;
+    width: 32%;
+    height: auto;
+
+    @media only screen and (max-width:bp.$breakPoint11) {
+        padding: 0px 30px;
+        width: 100%;
+        display: block;
+    }
+
+    @media only screen and (min-width:bp.$breakPoint11) {
+        width: 30%;
+        display: block;
+    }
+
+
+}

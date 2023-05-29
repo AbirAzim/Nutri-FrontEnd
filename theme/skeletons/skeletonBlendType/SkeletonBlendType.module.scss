@@ -1,0 +1,10 @@
+.skeletonBlendType_wraper {
+  margin-top: 10px;
+  .category_wraper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding-right: 5px;
+  }
+}

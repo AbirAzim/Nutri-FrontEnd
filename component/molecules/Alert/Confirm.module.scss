@@ -1,0 +1,59 @@
+@import "../../../styles/partials/variables";
+
+.alert {
+  width: 500px;
+  height: 182px;
+  border-radius: 29px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h3 {
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+
+.buttonGroup {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submitBtn {
+  border-radius: 23px;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 95px;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  background: $primaryColor;
+  box-shadow: 5px 5px 15px #fe5d1f38;
+  margin-right: 2rem;
+}
+
+.cancelBtn {
+  min-width: 95px;
+  height: 37px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: $primaryColor;
+  cursor: pointer;
+  &:hover {
+    background: transparent;
+    box-shadow: 5px 5px 15px #fe5d1f38;
+    border-radius: 23px;
+  }
+}

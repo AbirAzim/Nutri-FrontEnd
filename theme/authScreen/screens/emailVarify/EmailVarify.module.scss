@@ -1,0 +1,76 @@
+@mixin responsive ($minWidth, $maxWidth) {
+  @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+    @content;
+  }
+
+}
+
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.varifyEmailContainer {
+  padding: 50px 20px;
+  min-width: 900px;
+
+  @include responsive(0px, 900px) {
+    min-width: 100%;
+  }
+
+
+
+  img {
+    width: 190px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  h2 {
+    margin-top: 2px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+
+  p {
+    color: #000;
+    line-height: 2;
+    letter-spacing: 0.72px;
+    font-weight: 400;
+    text-align: left;
+    background-color: transparent;
+    font-size: 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px 0px;
+  }
+
+  .buttonContainer {
+    padding-top: 20px;
+  }
+
+  .link {
+    padding-top: 10px;
+    font-size: 12px;
+    text-decoration: underline;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 20px;
+    }
+
+    p {
+      margin-right: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

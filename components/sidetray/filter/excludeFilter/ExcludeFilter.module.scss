@@ -1,0 +1,79 @@
+@import "../../../../styles/partials/variables";
+.tabContainer {
+  background-color: white;
+  box-shadow: 1px 2px 4px #ececec;
+  border: 1px solid #f6f6f6;
+  padding: 8px;
+  border-radius: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+
+  .firstChild {
+    width: 100%;
+    border-top-left-radius: 3.5rem;
+    border-bottom-left-radius: 3.5rem;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(17, 36, 51, 0.1);
+    }
+  }
+  .middleChild {
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(17, 36, 51, 0.1);
+    }
+  }
+  .lastChild {
+    width: 100%;
+    border-top-right-radius: 3.5rem;
+    border-bottom-right-radius: 3.5rem;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 400;
+
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(17, 36, 51, 0.1);
+    }
+  }
+  .activeSecondary {
+    background-color: $secondaryColor;
+    color: #ffffff;
+
+    &:hover {
+      background-color: $secondaryColor !important;
+    }
+  }
+  .activePrimary {
+    background-color: $primaryColor;
+    color: #ffffff;
+
+    &:hover {
+      background-color: $primaryColor !important;
+    }
+  }
+}
+.activeTabContainerSecondary {
+  border-color: #7dbd3b;
+}
+.activeTabContainerPrimary {
+  border-color: $primaryColor;
+}

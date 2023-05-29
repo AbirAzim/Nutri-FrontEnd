@@ -1,0 +1,101 @@
+@import "../../../../styles/partials/variables";
+.cardContainer {
+  width: 100%;
+  height: auto;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #5b5b5b29;
+  border: 1px solid #e9e9e9;
+  opacity: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+  // &:hover {
+  //   .titleBox {
+  //     transform: translateY(0%);
+  //   }
+  // }
+
+  .coverImage {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .titleBox {
+    transition: all 0.3s;
+    width: 100%;
+    height: auto;
+    background-color: #808080bd;
+    padding: 10px;
+    color: #e9e9e9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    // transform: translateY(-100%);
+    .title {
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  .playButton {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  .videoBox {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+  }
+  .authorAndDate {
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: $lightTextColor;
+
+    .timeDuration {
+      background-color: rgba(128, 128, 128, 0.7411764706);
+      color: #e9e9e9;
+      margin-right: 8px;
+      padding: 2px;
+      border-radius: 2px;
+    }
+  }
+  .brandBox {
+    display: flex;
+    align-items: center;
+    .brandName {
+      padding-left: 10px;
+    }
+    .icon {
+      padding-left: 10px;
+      cursor: pointer;
+    }
+    .text {
+      padding-left: 2px;
+    }
+  }
+}
+.activeIconSecondary {
+  color: $secondaryColor;
+}
+.activeIconPrimary {
+  color: $primaryColor;
+}
+.inActiveIcon {
+  color: #c4c4c4;
+}

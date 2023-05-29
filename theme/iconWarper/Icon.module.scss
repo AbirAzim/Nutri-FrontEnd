@@ -1,0 +1,68 @@
+@import "../../styles/partials/variables";
+.iconContainer {
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: #c9c9c9;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  //color: #646464;
+}
+
+.gray {
+  background-color: #c9c9c9;
+}
+.slightGray {
+  background-color: #d6d6d6;
+}
+.slightDark {
+  background-color: #808080bd;
+}
+
+.primary {
+  color: $white;
+  background-color: $primaryColor;
+}
+.secondary {
+  color: $white;
+  background-color: $secondaryColor;
+}
+
+.bgPrimary {
+  &:hover {
+    color: $white;
+    background-color: $primaryColor;
+  }
+}
+.bgSecondary {
+  &:hover {
+    color: $white;
+    background-color: $secondaryColor;
+  }
+}
+.bgGray {
+  &:hover {
+    background-color: #ababab;
+  }
+}
+.bgSlightGray {
+  &:hover {
+    background-color: #d6d6d6;
+  }
+}
+.iconColorPrimary {
+  color: $primaryColor;
+}
+.iconColorSecondary {
+  color: $secondaryColor;
+}
+.iconColorWhite {
+  color: $white;
+}
+.iconColorDefault {
+  color: #646464;
+}

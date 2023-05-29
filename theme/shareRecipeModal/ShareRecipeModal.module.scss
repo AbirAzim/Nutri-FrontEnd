@@ -1,0 +1,123 @@
+.shareRecipeModalContainer {
+  width: 500px;
+  height: 182px;
+  border-radius: 29px !important;
+
+  .header {
+    width: 100%;
+    padding-top: 35px;
+    border: 0;
+    padding-bottom: 0;
+    position: relative;
+
+    h5 {
+      font-weight: 600;
+      color: #000;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    button {
+      border: 0;
+      width: 28px;
+      height: 28px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: #7cbc39;
+      color: #fff;
+      font-weight: bold;
+      box-shadow: 0px 2px 3px #0000000a;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      .closeIcon {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .modalBody {
+    padding: 33px;
+    display: flex;
+    justify-content: center;
+    .socialIconGroup {
+      display: flex;
+      align-items: center;
+
+      &:hover .fbIcon:hover {
+        border-color: #1578f2;
+        background: #1578f2;
+      }
+      &:hover .instaIcon:hover {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        color: #fff;
+        border-color: #fff;
+      }
+      &:hover .pinterestIcon:hover {
+        background: #e60023;
+        border-color: #e60023;
+      }
+      &:hover .twitterIcon:hover {
+        background: #1da1f2;
+      }
+      &:hover .linkedinIcon:hover {
+        background: #0177b5;
+        border-color: #0177b5;
+      }
+      &:hover .vkIcon:hover {
+        background: #2787f5;
+        border-color: #2787f5;
+      }
+      a {
+        width: 44px;
+        height: 44px;
+        border: 1px solid #ededed;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ccc;
+        font-size: 26px;
+        margin-right: 10px;
+        &:hover {
+          color: #fff;
+        }
+      }
+      button {
+        background: transparent;
+        width: 44px;
+        height: 44px;
+        border: 1px solid #ededed;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        .moreIcon {
+          font-size: 21px;
+          line-height: 0.8;
+          color: #ececec;
+          font-weight: 500;
+        }
+        p {
+          font-size: 10px;
+          color: #ececec;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

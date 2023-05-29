@@ -1,0 +1,184 @@
+@mixin card__content {
+  $image__width: 50%;
+  // background-color: rgb(206, 4, 4);
+  min-height: 350px;
+  display: flex;
+
+  @media only screen and (min-width: 0px) and (max-width: 730px) {
+    display: block;
+  }
+
+  @media only screen and (min-width: 970px) and (max-width: 1020px) {
+    min-height: 305px;
+  }
+
+  .Image {
+    position: relative;
+    width: $image__width;
+    // background-color: blue;
+
+    div {
+      margin: auto 0px;
+    }
+
+    @media only screen and (min-width: 0px) and (max-width: 730px) {
+      width: 100%;
+      min-height: 55vw;
+    }
+  }
+
+  .TextCard {
+    // background-color: rgb(254, 255, 255);
+    width: calc(100% - #{$image__width});
+
+    @media only screen and (min-width: 0px) and (max-width: 730px) {
+      width: 100%;
+    }
+
+    .container {
+      padding-left: 20px;
+      // background-color: #1ffe44;
+      min-height: 97%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        line-height: 1.5;
+
+        @media only screen and (min-width: 0px) and (max-width: 730px) {
+          width: 100%;
+          margin-top: 50px;
+          font-size: 22px;
+        }
+
+        @media only screen and (min-width: 730px) and (max-width: 1020px) {
+          font-size: 22px;
+        }
+      }
+
+      p {
+        margin: 10px auto 20px auto;
+        font-size: 15px;
+        color: #292b2c;
+        font-weight: 400;
+        line-height: 1.8;
+        letter-spacing: 0.8px;
+        // background-color: yellow;
+
+        @media only screen and (min-width: 0px) and (max-width: 730px) {
+          width: 100%;
+          margin-bottom: 100px;
+          font-size: 14px;
+        }
+
+        @media only screen and (min-width: 730px) and (max-width: 1020px) {
+          font-size: 14px;
+        }
+      }
+
+      .buttonDiv {
+        margin-top: auto;
+        width: 210px;
+        height: 60px;
+        flex-shrink: 0;
+        cursor: pointer;
+        margin-top: 30px;
+
+        @media only screen and (min-width: 0px) and (max-width: 970px) {
+          width: 160px;
+          height: 50px;
+          margin: auto auto 20px auto;
+        }
+
+        @media only screen and (min-width: 970px) and (max-width: 1020px) {
+          width: 160px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+@mixin list__elements {
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.8px;
+  margin-top: 8px;
+
+  li {
+    &:not(:last-child) {
+      margin: 0px 0px 20px 0px;
+    }
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+
+    &::before {
+      margin: auto 20px auto -6px;
+      content: url("/icons/check.svg");
+    }
+  }
+}
+
+.mainContainer {
+  min-height: 100vh;
+}
+
+.toggler {
+  background-color: #fe5d1f;
+  padding: 6px 20px 50px 20px;
+  border-radius: 5px;
+  color: #fff;
+
+  h2 {
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.44;
+    letter-spacing: 2.5px;
+    color: inherit;
+    font-size: 23px;
+    padding: 15px 0px;
+  }
+}
+
+.The__page {
+  min-height: 50vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  .card {
+    box-sizing: border-box;
+    margin: 62px 50px;
+
+    @media only screen and (min-width: 0px) and (max-width: 1020px) {
+      margin: 62px 0px;
+    }
+
+    &__top {
+      @include card__content();
+      margin-bottom: 60px;
+    }
+
+    &__below {
+      @include card__content();
+    }
+  }
+}
+
+.list__with__ticks {
+  &__top {
+    @include list__elements();
+    margin-top: 0px;
+  }
+
+  &__below {
+    @include list__elements();
+  }
+}

@@ -1,0 +1,58 @@
+.sectionWithInputContainer {
+  padding: 20px 0px;
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    @media screen and (max-width: 900px) {
+      font-size: 22px;
+    }
+  }
+}
+
+.inputContainer {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto 20px auto;
+  &__inputValueContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &__inputValue {
+      position: relative;
+      &:hover &__closeIcon {
+        display: block !important;
+      }
+      &__label {
+        border: 1px solid #7dbd3b;
+        border-radius: 23px;
+        padding: 10px 30px;
+        letter-spacing: 0.28px;
+        color: #7dbd3b;
+        font-size: 14px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 25px 25px 0;
+        cursor: pointer;
+      }
+      &__closeIcon {
+        position: absolute;
+        top: -14px;
+        right: 18px;
+        display: none !important;
+        cursor: pointer;
+        color: #c4c4c4;
+        transform: scale(0.75);
+        z-index: 1;
+        background-color: #ffffff;
+        &:hover {
+          color: #fe5d1f;
+        }
+      }
+    }
+  }
+}

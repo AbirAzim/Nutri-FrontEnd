@@ -1,0 +1,52 @@
+%sharedImageStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  height: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  max-width: 550px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+
+  &__addDiv {
+    @extend %sharedImageStyle;
+    margin: 10px;
+    font-size: 26px;
+    cursor: pointer;
+    border: 1px dashed rgb(224, 218, 218);
+    position: relative;
+
+    &__icon {
+      font-weight: 800;
+      color: rgb(224, 218, 218);
+    }
+  }
+}
+
+.imageCard {
+  @extend %sharedImageStyle;
+  position: relative;
+
+  background-color: rebeccapurple;
+
+  &__cross {
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    right: 7px;
+    background-color: red;
+    height: 16px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+  }
+}

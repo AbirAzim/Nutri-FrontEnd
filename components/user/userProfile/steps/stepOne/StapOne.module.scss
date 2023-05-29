@@ -1,0 +1,53 @@
+.stepOneContainer {
+  border: 1px solid #dfdfdf;
+  padding: 0 1rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #ececec;
+  .radioButton_wraper {
+    display: flex;
+  }
+  .infoText {
+    color: #929292;
+    font-size: 12px;
+    align-items: center;
+    text-align: center;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+}
+
+.singleSection {
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-auto-rows: auto;
+  gap: 1rem;
+  margin: 50px auto;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    @media screen and (max-width: 900px) {
+      font-size: 18px;
+    }
+  }
+  .contentContainer {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    margin: 30px auto;
+  }
+}
+
+.buttonContainer {
+  width: "100%";
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}

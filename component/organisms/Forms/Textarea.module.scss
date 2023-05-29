@@ -1,0 +1,53 @@
+@import "../../../styles/variables";
+
+.field {
+  label {
+    margin-bottom: 1rem;
+    display: block;
+
+    &.required:after {
+      content: "*";
+      color: $red;
+      margin-left: 0.3rem;
+    }
+  }
+  & + .field {
+    margin-top: 2rem;
+  }
+}
+
+.custom-input {
+  border: 1px solid $shadowGrey;
+  // box-shadow: 1px 2px 4px $shadowGrey;
+  padding: 1rem;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out, -moz-box-shadow 0.15s ease-in-out;
+  height: 4.5rem;
+  transition: 0.3s;
+  font-family: $font;
+  outline: 0;
+  width: 100%;
+  min-width: 12rem;
+  background-color: white;
+  &::placeholder {
+    font-size: 14px;
+    color: #bcbcbc;
+    margin-left: 2rem;
+  }
+  &[readonly] {
+    pointer-events: none;
+    background-color: $darkGrey;
+    border: 0;
+  }
+
+  &:focus {
+    border-color: $secondaryColor;
+  }
+}
+textarea.custom-input {
+  resize: vertical;
+  min-height: 120px;
+  margin-bottom: 0.9rem;
+}

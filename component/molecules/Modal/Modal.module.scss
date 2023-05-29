@@ -1,0 +1,29 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  background-color: white;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  min-height: 20rem;
+  min-width: 45rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__title {
+    padding: 0.5rem;
+  }
+  &__close {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+  }
+}

@@ -1,0 +1,99 @@
+/* 
+  ************************
+  * REACT DATEPICKER 
+  ************************
+*/
+
+.react-datepicker {
+  font-size: 1.3rem !important;
+}
+
+.react-datepicker__current-month {
+  font-size: 1.5rem !important;
+  color: #7cbc39 !important;
+}
+
+.react-datepicker__header {
+  padding-top: 6px !important;
+  background-color: white !important;
+  border-bottom: 1px solid #92cf53 !important;
+}
+
+.react-datepicker__navigation {
+  top: 7px !important;
+}
+
+.react-datepicker__current-month {
+  margin: 4px 0 !important;
+}
+.react-datepicker__day-name,
+.react-datepicker__day {
+  margin: 0.5rem !important;
+  // padding: 5px 15px !important;
+  // border-radius: 50% !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #7cbc39 !important;
+}
+
+#week-picker .react-datepicker__week {
+  cursor: pointer;
+  &:hover {
+    .react-datepicker__day {
+      border-radius: 3px;
+      color: white;
+      font-weight: bold;
+      background-color: #9fdb5e;
+    }
+  }
+}
+// .react-datepicker {
+//   font-size: 1em !important;
+// }
+// .react-datepicker__header {
+//   padding-top: 0.8em !important;
+// }
+// .react-datepicker__month {
+//   margin: 0.4em 1em !important;
+// }
+// .react-datepicker__day-name,
+// .react-datepicker__day {
+//   width: 1.9em !important;
+//   line-height: 1.9em !important;
+//   margin: 0.166em !important;
+// }
+// .react-datepicker__current-month {
+//   font-size: 1em !important;
+// }
+// .react-datepicker__navigation {
+//   top: 1em;
+//   line-height: 1.7em !important;
+//   border: 0.45em solid transparent !important;
+// }
+// .react-datepicker__navigation--previous {
+//   border-right-color: #ccc !important;
+//   left: 1em !important;
+// }
+// .react-datepicker__navigation--next {
+//   border-left-color: #ccc !important;
+//   right: 1em !important;
+// }
+
+//! ----------- CSS for Simple Screenshot Feedback ----------- !//
+
+div[data-html2canvas-ignore] {
+  font-family: $font;
+  & img {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(23%) saturate(7411%)
+      hue-rotate(353deg) brightness(97%) contrast(107%) !important;
+  }
+}
+
+//! ----------- CSS for Simple Screenshot Feedback ----------- !//
+// .slick-slide {
+//   margin: 0 10px;
+// }
+// .slick-list {
+//   margin: 0 -10px;
+// }

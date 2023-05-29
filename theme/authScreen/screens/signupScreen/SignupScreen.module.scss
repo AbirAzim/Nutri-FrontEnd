@@ -1,0 +1,441 @@
+@use "../../breakpoints.module.scss" as bp;
+
+.imgMainDiv {
+  position: relative;
+  display: block;
+  background-position-x: left;
+  background-position-y: center;
+  background-size: cover;
+  width: 50%;
+  min-height: 95vh;
+  // background-color: #7e2e2e;
+
+  @media screen and (max-width: bp.$breakPoint10) {
+    width: 100%;
+    // min-height: 95vh;
+  }
+
+  @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+    padding: 70px 33px;
+  }
+
+  .imgContentDiv {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // background-color: aqua;
+    margin: 0 auto;
+    height: 100%;
+    width: 60%;
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      min-width: 350px;
+      width: 60%;
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      min-width: 400px;
+      width: 80%;
+    }
+
+    @media screen and (min-width: bp.$breakPoint11) and (max-width: bp.$breakPoint12) {
+      min-width: 450px;
+      width: 55%;
+    }
+
+    .logo {
+      display: block;
+      // background-color: rgb(8, 160, 76);
+      width: 100%;
+      height: 100px;
+      position: relative;
+      margin-top: 0px;
+      // height: 150px;
+      // padding: 40px;
+
+      div {
+        // background-color: yellow;
+        width: 190px;
+        height: auto;
+      }
+
+      @media screen and (max-width: bp.$breakPoint10) {
+        display: none;
+        width: fit-content;
+        margin: 10px auto 2px auto;
+      }
+
+      @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+        width: auto;
+        margin: 5px 30px 2px;
+        // background-color: green;
+      }
+    }
+
+    .contentCard {
+      position: relative;
+      // background-color: rgb(29, 194, 117);
+      height: 260px;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-90%);
+
+      h2 {
+        display: block;
+        padding: 0;
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+        // background-color: #212529;
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 2;
+        color: #fff;
+        padding: 30px 29px;
+        word-wrap: break-word;
+        text-align: center;
+        width: auto;
+      }
+
+      .buttonRightDiv {
+        height: 60px;
+        width: 250px;
+        margin: 4px auto;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: bp.$breakPoint10) {
+        position: relative;
+        // background-color: rgb(139, 202, 21);
+        height: 200px;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        h2 {
+          font-size: 24px;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 14px;
+          padding: 20px 19px 0px 19px;
+          // width: ;
+        }
+
+        .buttonRightDiv {
+          height: 60px;
+          width: 200px;
+          margin: 20px auto;
+          // background-color: yellow;
+        }
+      }
+
+      @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+        height: auto;
+        padding-top: 30px;
+
+        h2 {
+          // background-color: yellow;
+          font-size: 22px;
+          font-weight: bold;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          padding: 16px 4px 16px 4px;
+          // margin: 30px auto;
+          // width: ;
+        }
+
+        .buttonRightDiv {
+          height: 50px;
+          width: 170px;
+          margin: 10px auto;
+        }
+      }
+
+      @media screen and (min-width: bp.$breakPoint11) and (max-width: bp.$breakPoint12) {
+        transform: translateY(-58%);
+
+        .buttonRightDiv {
+          height: 60px;
+          width: 250px;
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+}
+
+.inputMainDiv {
+  display: block;
+  width: 50%;
+  min-height: 95vh;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover;
+  padding: 0px;
+
+  @media screen and (max-width: bp.$breakPoint10) {
+    width: 100%;
+    min-height: 82vh;
+    padding: 0 22px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+    height: 100%;
+    padding: 10px;
+  }
+
+  .inputContentDiv {
+    display: block;
+    // background-color: #d4d5f1;
+    height: auto;
+    min-height: 70vh;
+    width: 90%;
+    margin: auto;
+    padding: 1px;
+
+    h2 {
+      // background-color: red;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 2px;
+      margin-top: 60px;
+    }
+
+    .hookline {
+      display: none;
+    }
+
+    .inputPara {
+      display: block;
+      font-size: 16px;
+      color: #000;
+      line-height: 2;
+      letter-spacing: 0.72px;
+      padding: 20px 0px;
+    }
+
+    @media screen and (max-width: bp.$breakPoint10) {
+      width: 100%;
+      margin-top: 5px;
+
+      // padding: ;
+      h2 {
+        font-size: 22px;
+        color: #000;
+        font-weight: 500;
+        line-height: 1.2;
+        // background-color: teal;
+        width: fit-content;
+        margin: 10px auto;
+      }
+
+      .hookline {
+        display: block;
+        // background-color: green;
+        text-align: center;
+        font-size: 14px;
+        padding: 12px 0px;
+      }
+
+      .inputPara {
+        display: none;
+      }
+
+      form {
+        .signUpButtonDiv {
+          margin: 15px auto 5px;
+          width: 200px;
+          // background-color: rgb(218, 215, 54);
+        }
+      }
+    }
+
+    @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+      h2 {
+        font-size: 22px;
+        color: #000;
+        font-weight: 600;
+        line-height: 1.2;
+        // background-color: teal;
+        // width: fit-content;
+        margin: 100px auto 0px;
+      }
+
+      .inputPara {
+        display: block;
+        font-size: 16px;
+        color: #000;
+        line-height: 2;
+        letter-spacing: 0.72px;
+        padding: 20px 0px;
+        // background-color: rgb(199, 86, 21);
+      }
+    }
+
+    @media screen and (min-width: bp.$breakPoint11) and (max-width: bp.$breakPoint12) {
+      padding: 10px 20px;
+    }
+
+    .logo {
+      position: relative;
+      display: none;
+      // background-color: rgb(8, 160, 76);
+
+      @media screen and (max-width: bp.$breakPoint10) {
+        display: flex;
+        // background-color: green;
+        width: 100%;
+        height: 100px;
+        position: relative;
+        left: 0;
+        // margin-top: 0px;
+        margin: 0px auto;
+        // height: 150px;
+        // padding: 40px;
+
+        div {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 190px;
+          margin-left: 100px;
+          height: 100%;
+          // background-color: rgb(58, 190, 32);
+
+          img {
+            display: inline-block;
+            // transform: translateX(-50%);
+            height: 100%;
+            width: 190px;
+            // background-color: yellow;
+          }
+        }
+
+        .cross {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%) scale(0.55);
+          display: block;
+          color: #cbcbcb;
+          width: fit-content;
+          height: fit-content;
+          margin: auto 0px auto auto;
+          font-size: 24px;
+          cursor: pointer;
+          display: none;
+
+          svg {
+            // background-color: rgb(146, 146, 86);
+            position: relative;
+            transform: translateY(15%);
+          }
+
+          @media screen and (max-width: bp.$breakPoint10) {
+            display: block;
+          }
+        }
+      }
+
+      @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+        width: 100%;
+        margin: 10px auto 0px auto;
+      }
+    }
+
+    .signUpButtonDiv {
+      // background-color: red;
+      margin: 45px auto 45px;
+      height: 60px;
+      width: 253px;
+      font-size: 18px;
+
+      @media screen and (max-width: bp.$breakPoint10) {
+      }
+
+      @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+        height: 50px;
+        width: 170px;
+        margin: 14px auto 60px;
+      }
+    }
+
+    .seperatorLogin {
+      margin: 0 auto;
+      height: auto;
+      position: relative;
+      border-bottom: solid 1px #e9ecef;
+      margin: 80px auto 40px auto;
+
+      &:before {
+        content: "or";
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #8995ac;
+        font-size: 16px;
+        top: 50%;
+        background-color: #f5f5f5;
+        padding: 0px 10px;
+        font-family: "Segoe UI";
+        //         }
+      }
+    }
+
+    .lineTrayA {
+      display: none;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: bp.$breakPoint10) {
+        display: block;
+
+        ul {
+          margin: 0px;
+          // background-color: red;
+        }
+
+        .seperatorLogin {
+          margin-top: 25px;
+        }
+      }
+
+      @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+        display: none;
+      }
+    }
+
+    .lineTrayB {
+      display: block;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: bp.$breakPoint10) {
+        display: none;
+      }
+
+      @media screen and (min-width: bp.$breakPoint10) and (max-width: bp.$breakPoint11) {
+        ul {
+          margin: 0px;
+        }
+
+        .seperatorLogin {
+          margin: 30px auto;
+        }
+      }
+    }
+  }
+}

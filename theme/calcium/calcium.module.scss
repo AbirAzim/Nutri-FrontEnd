@@ -1,0 +1,77 @@
+.calciumText {
+  position: relative;
+  color: #242424;
+  background-color: #fbfbfb;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 14px;
+  padding: 4px;
+  padding-left: 20px;
+  margin-left: 8px;
+  width: 90%;
+  height: 100%;
+  border-radius: 5px;
+  vertical-align: middle;
+
+  & div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+
+    & input {
+      font-size: 15px;
+      border: none;
+      width: 90%;
+      max-width: 450px;
+      background-color: transparent;
+      color: rgb(23, 24, 22);
+      font-weight: 400;
+
+      &::placeholder {
+        color: rgb(23, 24, 22);
+        font-size: 14px;
+      }
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
+
+.calciumMg {
+  border-radius: 5px;
+  align-items: center;
+  height: 45px;
+  margin-top: 16px;
+  color: grey;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calciumIcon {
+  background-color: #f1f1f1;
+  padding: 5px 0;
+  // height: 100%;
+  width: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #a6a6a6;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+
+  & div {
+    font-size: 20px;
+    // font-weight: 200;
+    // height: fit-content;
+    // width: fit-content;
+  }
+}

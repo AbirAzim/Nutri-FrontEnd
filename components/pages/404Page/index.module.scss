@@ -1,0 +1,23 @@
+.errorPageContainer {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // background-color: #f1efef;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  .text {
+    color: #c4c4c4;
+    padding-right: 10px;
+  }
+  .icon {
+    color: #7dbd3b;
+    padding-right: 10px;
+    cursor: pointer;
+  }
+}

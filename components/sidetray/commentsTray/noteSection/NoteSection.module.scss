@@ -1,0 +1,132 @@
+.commentsIconBox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.noteEditBox {
+  border: 1px solid #ececec;
+  border-radius: 15px;
+  padding: 10px;
+  max-height: calc(100vh - 210px);
+  margin-top: 20px;
+  overflow-x: hidden;
+  .singleNoteEdit {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    &:hover .header .rightSide {
+      transform: translateX(0);
+    }
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #000000;
+        transition: all 0.3s linear;
+      }
+      .active {
+        color: #fe5d1f;
+      }
+      .rightSide {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(120%);
+        transition: all 0.3s;
+        .content {
+          display: flex;
+          align-items: center;
+
+          .editIconBox {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            padding: 0;
+            border: 0;
+            background: #fbfbfb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            &:hover {
+              box-shadow: 0 10px 10px -10px rgb(0 0 0 / 50%);
+              color: #e0e0e047;
+            }
+            .icon {
+              font-size: 14px;
+              color: #646464;
+            }
+          }
+        }
+      }
+    }
+
+    .noteDis {
+      margin-top: 10px;
+      p {
+        color: #646464;
+        font-size: 12px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.headingHover {
+  cursor: pointer;
+  &:hover {
+    color: #fe5d1f !important;
+  }
+}
+
+.noNotes {
+  text-align: center;
+  color: #c1c1c1;
+  font-size: 16px;
+}
+
+.buttomDis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+
+  span {
+    font-size: 10px;
+    color: #c1c1c1;
+    font-weight: 300;
+  }
+
+  .on {
+    color: #fe5d1f;
+  }
+  .off {
+    color: #c1c1c1;
+  }
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+
+    .star {
+      margin-left: 10px;
+      // font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .pointerEventNone {
+    pointer-events: none;
+  }
+}

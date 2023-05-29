@@ -1,0 +1,30 @@
+@import "../../styles/partials/variables";
+@keyframes mymove {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mainLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__loader {
+    font-weight: 800;
+    animation: mymove 1s infinite;
+  }
+}
+
+.primary {
+  color: $primaryColor;
+}
+.secondary {
+  color: $secondaryColor;
+}
+.white {
+  color: $white;
+}
+.gray {
+  color: $fontGray;
+}
