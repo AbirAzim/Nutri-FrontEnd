@@ -13,8 +13,9 @@ const AppdownLoadCard = ({
   subTitle = "EXPLORE INGREDIENTS, NUTRITION AND HEALTH CATEGORIES WITH THE ALL-NEW BLENDING APP.",
 }: Props) => {
   return (
-    <div className={styles.orange__card}>
-      <div className={styles.orange__card__left}>
+    //className={styles.orange__card}
+    <div>
+      {/* <div className={styles.orange__card__left}>
         <h2>{title}</h2>
         <p>{subTitle}</p>
         <div className={styles.orange__card__left__Buttons}>
@@ -53,7 +54,7 @@ const AppdownLoadCard = ({
             objectFit={"contain"}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

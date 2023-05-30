@@ -176,7 +176,7 @@ const RegularRecipes = ({
           updateDataFunc={updateRecipe}
         />
 
-        <Widget slug="recipe-editor" />
+        {/* <Widget slug="recipe-editor" /> */}
       </div>
     </>
   );

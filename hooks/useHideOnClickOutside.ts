@@ -18,5 +18,3 @@ const useHideOnClickOutside = (handler: () => void) => {
 };
 
 export default useHideOnClickOutside;
-
-//prod

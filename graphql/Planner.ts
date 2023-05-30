@@ -560,6 +560,3 @@ export const GET_ALL_PLANS_FOR_A_COLLECTION = gql`
     }
   }
 `;
-
-
-//prod

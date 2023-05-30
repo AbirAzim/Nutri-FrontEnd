@@ -60,4 +60,3 @@ const useImage = (initState: any[]) => {
 };
 
 export default useImage;
-//prod

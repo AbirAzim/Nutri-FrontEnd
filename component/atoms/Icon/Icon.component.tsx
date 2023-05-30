@@ -71,5 +71,3 @@ Icon.defaultProps = {
 };
 
 export default Icon;
-
-//prod

@@ -149,5 +149,3 @@ export const {
 } = ChallengeSlice.actions;
 
 export default ChallengeSlice.reducer;
-
-//prod
