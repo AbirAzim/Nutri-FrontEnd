@@ -475,4 +475,6 @@ const SharedWithMe = ({
   );
 };
 
+//center
+
 export default CollectionRecipes;
